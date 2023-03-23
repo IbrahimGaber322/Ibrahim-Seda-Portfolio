@@ -1,0 +1,30 @@
+/* Nav-Bar */
+.my-nav-bar{
+    background-color: rgba(0, 0, 0, 0);
+}
+.my-nav-bar a{
+    color: white;
+}
+.my-nav-bar:hover .nav-link{ 
+    transition-delay: 0.2s, 0;
+    transition-property: opacity,filter;
+    opacity:0.2 ;
+    filter:blur(0.1rem) ;
+}
+.my-nav-bar .nav-link:hover{
+    color: #20C896;
+    opacity:1;
+    filter:blur(0);
+}
+.my-nav-bar .navbar-brand:hover{
+    color: white;
+}
+/* Home-Page */
+.my-home-page{
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.365),black),url("./images/back-ground.gif");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    
+}
