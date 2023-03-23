@@ -1,23 +1,44 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 /* Nav-Bar */
-.my-nav-bar{
-    background-color: rgba(0, 0, 0, 0);
+.my-navbar-brand{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
 }
 .my-nav-bar a{
-    color: white;
+    color: white !important;
 }
 .my-nav-bar:hover .nav-link{ 
-    transition-delay: 0.2s, 0;
-    transition-property: opacity,filter;
-    opacity:0.2 ;
-    filter:blur(0.1rem) ;
+    opacity:0.9 ;
+    filter:blur(0.05rem) ;
 }
 .my-nav-bar .nav-link:hover{
-    color: #20C896;
+    color: #20C896 !important;
+    opacity:1 !important;
+    filter:blur(0) !important;
+}
+.my-nav-bar .active{
+    color: #20C896 !important;
     opacity:1;
     filter:blur(0);
 }
 .my-nav-bar .navbar-brand:hover{
     color: white;
+}
+.hidden{
+    display: none;
+}
+.my-nav-icon.active{
+    color: white !important;
+}
+#facebook:hover{
+    color: 	#4267B2 !important;
+}
+#linkedin:hover{
+    color:  #0A66C2 !important;
+}
+#github:hover{
+    color: #171515 !important;
 }
 /* Home-Page */
 .my-home-page{

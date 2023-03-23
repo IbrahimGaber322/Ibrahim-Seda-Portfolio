@@ -1,21 +1,30 @@
-import React, {useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
-function CollapsibleExample() {
-  const [show, setShow] = useState(true);
+function MyNavbar() {
+  const [klass, setKlass] = useState("my-nav-bar");
+  const [style, setStyle] = useState({ backgroundColor: "rgba(0, 0, 0, 0)" });
   const [lastScrollY, setLastScrollY] = useState(0);
-
+  const [position, setPosition] = useState("false");
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
+      if (lastScrollY < 100) {
         // if scroll down hide the navbar
-        setShow(false);
-      } else {
+        setStyle({ backgroundColor: "rgba(0, 0, 0, 0)" });
+        setPosition("false");
+        setKlass("my-nav-bar");
+      } else if (lastScrollY >= 80 && lastScrollY < 110) {
         // if scroll up show the navbar
-        setShow(true);
+        setKlass("hidden");
+      } else if (lastScrollY >= 110) {
+        setStyle({ backgroundColor: "#111418" });
+        setKlass("my-nav-bar");
+        setPosition("top");
       }
 
       // remember current page location to use in the next move
@@ -26,40 +35,44 @@ function CollapsibleExample() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar);
-
+      window.addEventListener("resize", controlNavbar);
       // cleanup function
       return () => {
         window.removeEventListener("scroll", controlNavbar);
+        window.removeEventListener("resize", controlNavbar);
       };
     }
   }, [lastScrollY]);
   return (
-    <Navbar className={`active ${show && 'hidden'}`} fixed="top" collapseOnSelect expand="lg">
+    <Navbar
+      style={style}
+      className={klass}
+      fixed={position}
+      collapseOnSelect
+      expand="lg"
+    >
       <Container fluid>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand className="my-navbar-brand" href="#home">Ibrahim</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="m-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown> */}
+            <Nav.Link href="#features">Home</Nav.Link>
+            <Nav.Link href="#u">About</Nav.Link>
+            <Nav.Link href="#e">What I Do</Nav.Link>
+            <Nav.Link href="#g">Resume</Nav.Link>
+            <Nav.Link href="#f">Portfolio</Nav.Link>
+            <Nav.Link href="#d">Client</Nav.Link>
+            <Nav.Link href="#s">Contact</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
+            <Nav.Link id="facebook" className="my-nav-icon" href="#deets">
+              <FacebookIcon />
+            </Nav.Link>
+            <Nav.Link id="linkedin" className="my-nav-icon" href="#memes">
+              <LinkedInIcon />
+            </Nav.Link>
+            <Nav.Link id="github" className="my-nav-icon" href="#memes">
+              <GitHubIcon />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -68,4 +81,4 @@ function CollapsibleExample() {
   );
 }
 
-export default CollapsibleExample;
+export default MyNavbar;
