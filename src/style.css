@@ -103,3 +103,93 @@
     color: white;
     font-size: 3rem !important;
 }
+
+/*About Page */
+.my-about-page{
+    background-color: #212529;
+    padding: 3% 20% 3% 20%;
+}
+.my-about-page h2{
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    bottom: 3rem;
+    font-size: 2rem;
+   display: inline-block;
+   padding-bottom: 1rem;
+}
+    
+.my-about-page h2:after {
+    content: '';
+    position:absolute;
+    bottom:0;
+    margin-top: 3rem;
+    left: 47%;
+    right: 47%;
+    height: 0.2rem;
+    background:#20C997;
+    display:block;
+    }
+.my-about-page h1{
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    top: 1rem;
+    color: #292D32;
+    font-size: 5rem;
+    width: fit-content;
+}
+.my-about-page h3{
+    color: white;
+    font-size: 1.5rem;
+    width: fit-content;
+}
+
+.my-about-page p{
+    color: #909294;
+    font-size: 1rem;
+    width: 83%;
+}
+.my-about-page h4{
+    color: white;
+    font-size: 1rem;
+    border: 0.1rem solid #90929472;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    width: 80%;
+    padding-bottom: 1rem;
+}
+.my-about-page a{
+    text-decoration: none;
+    color: #20C896;
+}
+.my-about-page a:hover{
+    text-decoration: none;
+    color: #128c6774;
+}
+.my-about-page .btn{
+
+    width: fit-content;
+    margin: auto;
+    font-size: 1rem;
+    background-color: #1BAA80;
+    font-weight: 500;
+    padding: 0.8rem 3rem;
+}
+.my-about-page h5{
+  color: #909294;
+  font-size: 5rem;
+  font-weight: 500;
+}
+.my-about-page h6{
+  color:white;
+}
+.my-border-right{
+    text-align: center;
+    border: 0.1rem solid #90929472 ;
+    border-top: 0; border-left: 0; border-bottom: 0;
+}
