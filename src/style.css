@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* Nav-Bar */
 .my-navbar-brand{
     font-family: 'Poppins', sans-serif;
@@ -26,26 +26,60 @@
     color: white;
 }
 .hidden{
-    display: none;
+    visibility: hidden;
 }
 .my-nav-icon.active{
     color: white !important;
 }
 #facebook:hover{
     color: 	#4267B2 !important;
+    opacity:1 !important;
+    filter:blur(0) !important;
 }
 #linkedin:hover{
     color:  #0A66C2 !important;
+    opacity:1 !important;
+    filter:blur(0) !important;
 }
 #github:hover{
-    color: #171515 !important;
+    color: #a5a2a2 !important;
+    opacity:1 !important;
+    filter:blur(0) !important;
 }
-/* Home-Page */
-.my-home-page{
-    height: 80vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.365),black),url("./images/back-ground.gif");
-    background-size: 100% 100%;
+/* Back-ground */
+.my-background{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.365),black),url("./images/back-ground.jpg");
+    background-size: 100% 100vh;
     background-attachment: fixed;
-    
+    background-repeat: no-repeat;
+    padding-left: 0;
+    padding-right: 0;
+}
+/* HomePage */
+.my-home-page{
+    text-align: center;
+    height: 90vh;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding-bottom: 20vh;
+    font-family: 'Poppins', sans-serif;
+
+}
+.my-home-page span{
+    font-size: 5rem;
+    font-weight: 600;
+}
+.my-home-page p{
+   font-size: 3rem;
+   font-weight: 400;
+}
+.my-home-page .btn{
+    width: fit-content;
+    margin: auto;
+    font-size: 3rem;
+    border: 0.25rem solid #20C997;
+    padding: 0.8rem 3rem;
 }

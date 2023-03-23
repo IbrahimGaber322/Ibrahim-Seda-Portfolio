@@ -5,33 +5,21 @@ import Navbar from "react-bootstrap/Navbar";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import MenuIcon from '@mui/icons-material/Menu';
 
 function MyNavbar() {
-  const [klass, setKlass] = useState("my-nav-bar");
-  const [style, setStyle] = useState({ backgroundColor: "rgba(0, 0, 0, 0)" });
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [position, setPosition] = useState("false");
+  const [style, setStyle] = useState({ backgroundColor: "rgba(0, 0, 0, 0)", visibility:"visible"});
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
-      if (lastScrollY < 100) {
-        // if scroll down hide the navbar
-        setStyle({ backgroundColor: "rgba(0, 0, 0, 0)" });
-        setPosition("false");
-        setKlass("my-nav-bar");
-      } else if (lastScrollY >= 80 && lastScrollY < 110) {
-        // if scroll up show the navbar
-        setKlass("hidden");
-      } else if (lastScrollY >= 110) {
-        setStyle({ backgroundColor: "#111418" });
-        setKlass("my-nav-bar");
-        setPosition("top");
+      if (window.scrollY < 100) {
+        setStyle({ backgroundColor: "rgba(0, 0, 0, 0)", visibility:"visible" });
+      } else if (window.scrollY >= 80 && window.scrollY < 200) {
+        setStyle({ backgroundColor: "rgba(0, 0, 0, 0)", visibility:"hidden" });
+      } else if (window.scrollY >= 200) {
+        setStyle({ backgroundColor: "#111418", visibility:"visible", transition: "all 1s ease" });
       }
-
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY);
     }
   };
-
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar);
@@ -42,18 +30,18 @@ function MyNavbar() {
         window.removeEventListener("resize", controlNavbar);
       };
     }
-  }, [lastScrollY]);
+  });
   return (
     <Navbar
       style={style}
-      className={klass}
-      fixed={position}
+      className="my-nav-bar"
+      sticky="top"
       collapseOnSelect
       expand="lg"
     >
       <Container fluid>
         <Navbar.Brand className="my-navbar-brand" href="#home">Ibrahim</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" ><MenuIcon style={{color:"white"}} /></Navbar.Toggle> 
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="m-auto">
             <Nav.Link href="#features">Home</Nav.Link>
