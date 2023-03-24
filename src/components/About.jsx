@@ -32,7 +32,7 @@ function About(){
       <Button className="rounded-pill"  variant="success">Download CV</Button>
       </Col>
     </Row>
-    <Row className="pt-5 mt-5 stats">
+    <Row className="pt-3 mt-3">
       <Col xs={6} lg={3} className="stats-1">
       <p className="stats-title">3+</p>
       <p className="stats-desc">Months Experience</p>

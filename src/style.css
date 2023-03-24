@@ -58,8 +58,9 @@
     filter: blur(0) !important;
 }
 
-/* Back-ground */
-.my-background {
+/* App */
+.my-app {
+    font-family: 'Poppins', sans-serif;
     background-image: linear-gradient(rgba(0, 0, 0, 0.365), black), url("./images/back-ground.jpg");
     background-size: 100% 100vh;
     background-attachment: fixed;
@@ -72,13 +73,10 @@
 .my-home-page {
     text-align: center;
     height: 92vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: white;
-    font-family: 'Poppins', sans-serif;
-
 }
 
 .my-home-page span {
@@ -167,7 +165,7 @@
 
 .my-about-page {
     background-color: #212529;
-    padding: 3% 20% 7% 20%;
+    padding: 3% 20% 3% 20%;
     
 }
 
@@ -270,106 +268,65 @@
 
 /* Services */
 
+.my-services-page .title-div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.my-services-page .title {
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 3rem;
+}
+
+.my-services-page .title:after {
+    content: '';
+    height: 2px;
+    width: calc(4vw + 6rem);
+    background: #20C997;
+    position: absolute;
+    margin: auto;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+}
+
+.my-services-page .back-title {
+    color: #3E444A !important;
+    font-size: calc(1.95rem + 6vw) !important;
+    font-weight: 700;
+}
+
 .my-services-page {
     background-color: #343A40;
-    padding: 3% 20% 3% 20%;
+    padding: 3% 20% 1% 20%;
+    
 }
-
-.my-services-page h2 {
-    color: white;
-    text-align: center;
-    position: relative;
-    z-index: 100;
-    bottom: 5rem;
-    font-size: 2rem;
-    display: inline-block;
-    padding-bottom: 1rem;
-}
-
-.my-services-page h2:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    margin-top: 3rem;
-    left: 47%;
-    right: 47%;
-    height: 0.2rem;
-    background: #20C997;
-    display: block;
-}
-
-.my-services-page h1 {
-    color: #3E444A !important;
-    opacity: 1;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    margin: auto;
-    top: 1rem;
-    color: #292D32;
-    font-size: 8rem;
-    font-weight: 900;
-    width: fit-content;
-    word-break: break-all;
-}
-
-.my-services-page h3 {
-    color: white;
-    font-size: 1.5rem;
-    width: fit-content;
-}
-
-.my-services-page p {
-    color: #909294;
-    font-size: 1rem;
-    width: 83%;
-}
-
-.my-services-page h4 {
-    color: white;
-    font-size: 1rem;
-    border: 0.1rem solid #90929472;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    width: 80%;
-    padding-bottom: 1rem;
-}
-
-.my-services-page a {
-    text-decoration: none;
-    color: #20C896;
-}
-
-.my-services-page a:hover {
-    text-decoration: none;
-    color: #128c6774;
-}
-
-.my-services-page .btn {
-
-    width: fit-content;
-    margin: auto;
-    font-size: 1rem;
-    background-color: #1BAA80;
-    font-weight: 500;
-    padding: 0.8rem 3rem;
-}
-
-.my-services-page h5 {
-    color: #909294;
+.my-services-page .services-icon{
     font-size: 5rem;
-    font-weight: 500;
+    background-color: #212529;
+    color: #20C896;
+    padding: 1rem;
+    border-radius: 10%;
+    float: left;
+    margin-right: 1rem;
 }
-
-.my-services-page h6 {
+.my-services-page .service-title{
+    text-align: start;
     color: white;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
-.my-border-right {
-    text-align: center;
-    border: 0.1rem solid #90929472;
-    border-top: 0;
-    border-left: 0;
-    border-bottom: 0;
+.my-services-page .service-desc{
+    color: #9A9DA0;
+    text-align: start;
+    overflow: hidden;
+    font-size: 1rem;
 }

@@ -8,7 +8,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 function App() {
   return (
-    <Container className="my-background" fluid>
+    <Container className="my-app" fluid>
       <MyNavbar />
       <Home />
       <About />

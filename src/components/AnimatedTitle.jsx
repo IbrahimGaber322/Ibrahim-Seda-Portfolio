@@ -9,7 +9,7 @@ function AnimatedTitle(){
     const typed = new Typed(el.current, {
       strings: ["I'm Ibrahim Gaber.",
        "I'm an Engineer.",
-       "I'm a web-dev."
+       "I'm a web-developer."
     ],
       typeSpeed: 100,
       smartBackspace: true,
@@ -26,7 +26,7 @@ function AnimatedTitle(){
   }, []);
 
   return (
-    <div>
+    <div style={{ height: "100px" }}>
       <span ref={el} />
     </div>
   );
