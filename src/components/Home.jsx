@@ -11,7 +11,7 @@ function Home(){
     <Row className="p-4"><AnimatedTitle /></Row>
     <Row className="p-4"><p>based in Cairo, Egypt.</p></Row>
     <Row className="p-4"><Button className="rounded-pill" variant="outline-success">Hire Me</Button></Row>
-    <Row className="mb-0 mt-auto"><a href=""><KeyboardArrowDownIcon className="arrow bounce" /></a></Row>
+    <Row className="mb-0 mt-auto"><a href="#about"><KeyboardArrowDownIcon className="arrow bounce" /></a></Row>
   </Container> 
   ;
 }

@@ -9,7 +9,7 @@ function AnimatedTitle(){
     const typed = new Typed(el.current, {
       strings: ["I'm Ibrahim Gaber.",
        "I'm an Engineer.",
-       "I'm a web-developer."
+       "I'm a web-dev."
     ],
       typeSpeed: 100,
       smartBackspace: true,

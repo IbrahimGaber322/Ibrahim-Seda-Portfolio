@@ -6,48 +6,48 @@ import Col from 'react-bootstrap/Col'
 
 function About(){
     return <Container id="about" className="my-about-page" fluid>
-    <Row>
-      <h1>ABOUT ME</h1>
-      <h2>Know Me More</h2>
+    <Row className="title-div mb-3 pb-3">
+      <p className="title">Know Me More</p>
+      <p className="back-title">ABOUT ME</p>
     </Row>
-    <Row>
+    <Row className="mt-3 mb-3 pb-3">
       <Col lg={8}>
-        <h3>I'm Ibrahim Seda, a Web Developer</h3>
-        <p>
+        <p className="desc-title">I'm Ibrahim Gaber, a Web Developer.</p>
+        <p className="desc-text">
           I help you build brand for your business at an affordable price.
           Thousands of clients have procured exceptional results while
           working with our dedicated team. when an unknown printer took a
           galley of type and scrambled it to make a type specimen book.
-         </p><p>
+         </p><p className="desc-text">
           Delivering work within time and budget which meets client’s
           requirements is our moto. Lorem Ipsum has been the industry's
           standard dummy text ever when an unknown printer took a galley.
         </p>
       </Col>
       <Col>
-       <h4>Name: Ibrahim Seda</h4>
-      <h4>Email: <a href="">ibrahimseda322@gmail.com</a></h4>
-      <h4>Age: 23</h4>
-      <h4 style={{border:"none"}}> From: Cairo, Egypt</h4>
+       <p className="my-info">Name: Ibrahim Gaber</p>
+      <p className="my-info">Email: <a href="">ibrahimseda322@gmail.com</a></p>
+      <p className="my-info">Age: 23</p>
+      <p className="my-info" style={{border:"none"}}> From: Cairo, Egypt</p>
       <Button className="rounded-pill"  variant="success">Download CV</Button>
       </Col>
     </Row>
-    <Row className="pt-5 mt-3">
-      <Col className="my-border-right">
-      <h5>3+</h5>
-      <h6>Months Experience</h6>
+    <Row className="pt-5 mt-5 stats">
+      <Col xs={6} lg={3} className="stats-1">
+      <p className="stats-title">3+</p>
+      <p className="stats-desc">Months Experience</p>
       </Col>
-      <Col className="my-border-right">
-      <h5>2</h5>
-      <h6>Happy Clients</h6>
+      <Col xs={6} lg={3} className="stats-2">
+      <p className="stats-title">2</p>
+      <p className="stats-desc">Happy Clients</p>
       </Col>
-      <Col className="my-border-right">
-      <h5>10+</h5>
-      <h6>Projects Done</h6>
+      <Col xs={6} lg={3} className="stats-3">
+      <p className="stats-title">10+</p>
+      <p className="stats-desc">Projects Done</p>
       </Col>
-      <Col className="text-center">
-      <h5>0</h5>
-      <h6>Awards</h6>
+      <Col xs={6} lg={3} className="stats-4">
+      <p className="stats-title">0</p>
+      <p className="stats-desc">Awards</p>
       </Col>
     </Row>
   </Container> ;
