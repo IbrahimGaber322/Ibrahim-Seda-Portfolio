@@ -7,7 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuIcon from '@mui/icons-material/Menu';
 
-function MyNavbar() {
+function Header() {
   const [style, setStyle] = useState({ backgroundColor: "rgba(0, 0, 0, 0)", visibility:"visible"});
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
@@ -69,4 +69,4 @@ function MyNavbar() {
   );
 }
 
-export default MyNavbar;
+export default Header;

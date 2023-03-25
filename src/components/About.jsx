@@ -5,14 +5,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 
 function About(){
-    return <Container id="about" className="my-about-page" fluid>
+    return <Container id="about" className="my-about-page section-padding" fluid>
     <Row className="title-div mb-3 pb-3">
       <p className="title">Know Me More</p>
       <p className="back-title">ABOUT ME</p>
     </Row>
     <Row className="mt-3 mb-3 pb-3">
-      <Col lg={8}>
-        <p className="desc-title">I'm Ibrahim Gaber, a Web Developer.</p>
+      <Col className="pb-4" lg={8}>
+        <p className="desc-title">I'm <span>Ibrahim Gaber</span>, a Web Developer.</p>
         <p className="desc-text">
           I help you build brand for your business at an affordable price.
           Thousands of clients have procured exceptional results while

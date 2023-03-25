@@ -11,7 +11,7 @@ import AnalyticsIcon from '@mui/icons-material/Analytics';
 import CampaignIcon from '@mui/icons-material/Campaign';
 
 function Services(){
-    return <Container id="services" className="my-services-page" fluid>
+    return <Container id="services" className="my-services-page section-padding" fluid>
     <Row className="title-div mb-3 pb-3">
       <p className="title">What I Do?</p>
       <p className="back-title">SERVICES</p>

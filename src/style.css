@@ -58,7 +58,7 @@
     filter: blur(0) !important;
 }
 
-/* App */
+/* App and general classes */
 .my-app {
     font-family: 'Poppins', sans-serif;
     background-image: linear-gradient(rgba(0, 0, 0, 0.365), black), url("./images/back-ground.jpg");
@@ -68,7 +68,45 @@
     padding-left: 0;
     padding-right: 0;
 }
+.section-padding{
+    padding: 3% 15% 1% 15%;
+}
+@media only screen and (max-width: 1400px) {
+    .section-padding {
+        padding: 3% 5% 1% 5%;
+  }
+}
+.back-title{
+    font-size: calc(1.95rem + 6vw) ;
+    font-weight: 700; 
+}
+.title {
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 3rem;
+    width: fit-content;
+}
 
+.title:after {
+    content: '';
+    height: 2px;
+    width: 50%;
+    background: #20C997;
+    position: absolute;
+    margin: auto;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+}
+.title-div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 /* HomePage */
 .my-home-page {
     text-align: center;
@@ -128,58 +166,38 @@
 }
 
 /*About Page */
-.my-about-page .title-div {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.my-about-page .title {
-    color: white;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-    font-size: 3rem;
-}
-
-.my-about-page .title:after {
-    content: '';
-    height: 2px;
-    width: calc(4vw + 6rem);
-    background: #20C997;
-    position: absolute;
-    margin: auto;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-}
-
 .my-about-page .back-title {
-    color: #292D32 !important;
-    font-size: calc(1.95rem + 6vw) !important;
-    font-weight: 700;
+    color: #292D32 ;
 }
 
 .my-about-page {
-    background-color: #212529;
-    padding: 3% 20% 3% 20%;
-    
+    background-color: #212529;  
 }
 
 .my-about-page .desc-title {
     color: white;
     font-size: 1.5rem;
-    width: fit-content;
+    
 }
-
+.my-about-page .desc-title span {
+    color: #20C896; 
+}
 .my-about-page .desc-text {
     color: #909294;
     font-size: 1rem;
     width: 83%;
 }
+@media only screen and (max-width: 992px) {
+    .my-about-page .desc-title {
+        text-align: center;
+        
+    }
+    
+    .my-about-page .desc-text {
+       text-align: center;
+       width: 100%;
+    }
+  }
 
 .my-about-page a {
     text-decoration: none;
@@ -210,7 +228,7 @@
 }
 .my-about-page .stats-title {
     color: #909294;
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 500;
 }
 
@@ -267,46 +285,12 @@
   }
 
 /* Services */
-
-.my-services-page .title-div {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.my-services-page .title {
-    color: white;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-    font-size: 3rem;
-}
-
-.my-services-page .title:after {
-    content: '';
-    height: 2px;
-    width: calc(4vw + 6rem);
-    background: #20C997;
-    position: absolute;
-    margin: auto;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-}
-
 .my-services-page .back-title {
     color: #3E444A !important;
-    font-size: calc(1.95rem + 6vw) !important;
-    font-weight: 700;
 }
 
 .my-services-page {
     background-color: #343A40;
-    padding: 3% 20% 1% 20%;
-    
 }
 .my-services-page .services-icon{
     font-size: 5rem;
@@ -329,4 +313,34 @@
     text-align: start;
     overflow: hidden;
     font-size: 1rem;
+}
+/* Summary */
+.my-summary-page{
+    background-color: #212529;
+}
+.my-summary-page .back-title{
+    color:#292D32;
+}
+.summary-card{
+    background-color: #111418;
+    padding-bottom: 0.5rem !important;
+}
+.summary-title{
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.summary-date{
+    color: white;
+    background-color: #20C997;
+    width: fit-content;
+    padding: 0.3rem 0.5rem ;
+    font-size: 0.9rem;
+    line-height: 100%;
+}
+.summary-title-2{
+    color: #1EAE84;
+}
+.summary-desc{
+    color: #888A8C;
 }
