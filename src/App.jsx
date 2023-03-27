@@ -8,6 +8,7 @@ import Services from "./components/Services";
 import Header from "./components/Header";
 import Summary from "./components/Summary";
 import BackToTop from "./components/BackToTop";
+
 function App() {
   return (
     <Container className="my-app" fluid>
@@ -15,7 +16,7 @@ function App() {
       <About />
       <Services />
       <Summary />
-     
+      <BackToTop />
     </Container>
   );
 }

@@ -50,6 +50,17 @@
     flex-direction: column;
     justify-content: center;
 }
+.title-2{
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.title-2 span{
+    float: right;
+}
+.title-3{
+    color: #1EAE84;
+}
 /* Nav-Bar */
 .my-navbar-brand {
     font-family: 'Poppins', sans-serif;
@@ -324,11 +335,6 @@
     background-color: #111418;
     padding-bottom: 0.5rem !important;
 }
-.summary-title{
-    color: white;
-    font-size: 1.25rem;
-    font-weight: 600;
-}
 .summary-date{
     color: white;
     background-color: #20C997;
@@ -336,9 +342,6 @@
     padding: 0.3rem 0.5rem ;
     font-size: 0.9rem;
     line-height: 100%;
-}
-.summary-title-2{
-    color: #1EAE84;
 }
 .summary-desc{
     color: #888A8C;
@@ -354,4 +357,34 @@
 }
 .back-to-top:hover{
     background-color: #1EAE84 ;
+}
+/* Skills */
+.skill-div{
+    width: 100%;
+}
+.my-progess-bar{
+  background-color: #111418 ;
+  height: 0.5rem;
+}
+.my-progess-bar .progress-bar{
+    background-color: #1EAE84;
+}
+.my-summary-page .btn {
+    width: fit-content;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.15rem solid rgba(255, 255, 255, 0.381);
+    color:rgba(255, 255, 255, 0.381);
+    font-weight: 500;
+    padding: 0.8rem 3rem;
+}
+
+.my-summary-page .btn:hover {
+    width: fit-content;
+    margin: auto;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.381);
+    font-weight: 500;
+    padding: 0.8rem 3rem;
 }
