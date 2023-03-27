@@ -1,6 +1,55 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* App and general classes */
+.my-app {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.365), black), url("./images/back-ground.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+.section-padding{
+    padding: 4.625rem 15% 1% 15%;
+}
+@media only screen and (max-width: 1400px) {
+    .section-padding {
+        padding: 4.625rem 5% 1% 5%;
+  }
+}
+.back-title{
+    font-size: calc(1.95rem + 6vw) ;
+    font-weight: 700; 
+}
+.title {
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: calc(1rem + 4vw) ;
+    width: fit-content;
+}
 
+.title:after {
+    content: '';
+    height: 2px;
+    width: 50%;
+    background: #20C997;
+    position: absolute;
+    margin: auto;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+}
+.title-div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 /* Nav-Bar */
 .my-navbar-brand {
     font-family: 'Poppins', sans-serif;
@@ -39,78 +88,28 @@
 .my-nav-icon.active {
     color: white !important;
 }
-
-#facebook:hover {
+.my-nav-bar .nav-link.facebook:hover {
     color: #4267B2 !important;
     opacity: 1 !important;
     filter: blur(0) !important;
 }
 
-#linkedin:hover {
+
+.my-nav-bar .nav-link.linkedin:hover {
     color: #0A66C2 !important;
     opacity: 1 !important;
     filter: blur(0) !important;
 }
 
-#github:hover {
+.my-nav-bar .nav-link.github:hover {
     color: #a5a2a2 !important;
     opacity: 1 !important;
     filter: blur(0) !important;
 }
-
-/* App and general classes */
-.my-app {
-    font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.365), black), url("./images/back-ground.jpg");
-    background-size: 100% 100vh;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    padding-left: 0;
-    padding-right: 0;
-}
-.section-padding{
-    padding: 3% 15% 1% 15%;
-}
-@media only screen and (max-width: 1400px) {
-    .section-padding {
-        padding: 3% 5% 1% 5%;
-  }
-}
-.back-title{
-    font-size: calc(1.95rem + 6vw) ;
-    font-weight: 700; 
-}
-.title {
-    color: white;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    font-size: 3rem;
-    width: fit-content;
-}
-
-.title:after {
-    content: '';
-    height: 2px;
-    width: 50%;
-    background: #20C997;
-    position: absolute;
-    margin: auto;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-}
-.title-div {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 /* HomePage */
 .my-home-page {
     text-align: center;
-    height: 92vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,7 +117,7 @@
 }
 
 .my-home-page span {
-    font-size: 2.5rem;
+    font-size: calc(0.8rem + 2vw);
     font-weight: 600;
 }
 
@@ -177,7 +176,7 @@
 .my-about-page .desc-title {
     color: white;
     font-size: 1.5rem;
-    
+   
 }
 .my-about-page .desc-title span {
     color: #20C896; 
@@ -343,4 +342,16 @@
 }
 .summary-desc{
     color: #888A8C;
+}
+
+/* back-to-top */
+.back-to-top{
+    background-color: #1114186b ;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 0;
+}
+.back-to-top:hover{
+    background-color: #1EAE84 ;
 }

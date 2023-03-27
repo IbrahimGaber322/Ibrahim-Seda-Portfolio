@@ -7,14 +7,15 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Header from "./components/Header";
 import Summary from "./components/Summary";
+import BackToTop from "./components/BackToTop";
 function App() {
   return (
     <Container className="my-app" fluid>
-      <Header />
       <Home />
       <About />
       <Services />
       <Summary />
+     
     </Container>
   );
 }

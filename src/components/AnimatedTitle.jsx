@@ -1,6 +1,5 @@
 import React from "react";
 import Typed from 'typed.js';
-
 function AnimatedTitle(){
      // Create reference to store the DOM element containing the animation
   const el = React.useRef(null);
@@ -26,9 +25,9 @@ function AnimatedTitle(){
   }, []);
 
   return (
-    <div style={{ height: "100px" }}>
+    
       <span ref={el} />
-    </div>
+
   );
 }
 

@@ -1,15 +1,16 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 import Stack from 'react-bootstrap/Stack';
 
 function Summary(){
-    return <Container id="summary" className="my-summary-page section-padding" fluid>
-    <Row className="title-div mb-3 pb-3">
+    return <section className="container-fluid my-summary-page section-padding" id="summary">
+    <Row >
+    <Col className="title-div mb-3 pb-3">
       <p className="title">Resume</p>
       <p className="back-title">SUMMARY</p>
+      </Col>
     </Row>
     <Row className="gx-5 gy-5">
         <Col md={6}>
@@ -59,7 +60,7 @@ function Summary(){
     </Stack>
         </Col>
     </Row>
-    </Container>
+    </section>
  }
 
 

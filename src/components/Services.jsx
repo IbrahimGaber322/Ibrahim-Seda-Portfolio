@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 import PaletteIcon from '@mui/icons-material/Palette';
@@ -11,10 +10,12 @@ import AnalyticsIcon from '@mui/icons-material/Analytics';
 import CampaignIcon from '@mui/icons-material/Campaign';
 
 function Services(){
-    return <Container id="services" className="my-services-page section-padding" fluid>
-    <Row className="title-div mb-3 pb-3">
+    return <section className="container-fluid my-services-page section-padding" id="services">
+    <Row>
+      <Col className="title-div mb-3 pb-3">
       <p className="title">What I Do?</p>
       <p className="back-title">SERVICES</p>
+      </Col>
       </Row>
       <Row>
       <Col className="p-4 service" md={6}>
@@ -48,7 +49,7 @@ function Services(){
       <p className="service-desc">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
       </Col>
     </Row>
-  </Container> ;
+  </section> 
 }
 
 export default Services;

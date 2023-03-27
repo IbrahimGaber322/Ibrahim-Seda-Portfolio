@@ -5,10 +5,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 
 function About(){
-    return <Container id="about" className="my-about-page section-padding" fluid>
-    <Row className="title-div mb-3 pb-3">
+    return <section id="about" className="container-fluid my-about-page section-padding">
+    <Row>
+     <Col className="title-div mb-3 pb-3">
       <p className="title">Know Me More</p>
       <p className="back-title">ABOUT ME</p>
+    </Col>
     </Row>
     <Row className="mt-3 mb-3 pb-3">
       <Col className="pb-4" lg={8}>
@@ -50,7 +52,7 @@ function About(){
       <p className="stats-desc">Awards</p>
       </Col>
     </Row>
-  </Container> ;
+  </section>
 }
 
 export default About;
