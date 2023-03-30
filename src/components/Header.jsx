@@ -23,6 +23,7 @@ function Header() {
       }
     }
   }
+  controlNavbar();
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar);
       window.addEventListener("resize", controlNavbar);
@@ -75,7 +76,7 @@ function Header() {
             <Nav.Link active={active === "#about" ? true : false} href="#about">About</Nav.Link>
             <Nav.Link active={active === "#services" ? true : false} href="#services">What I Do</Nav.Link>
             <Nav.Link active={active === "#summary" ? true : false} href="#summary">Resume</Nav.Link>
-            <Nav.Link active={active === "" ? true : false} href="#f">Portfolio</Nav.Link>
+            <Nav.Link active={active === "#portfolio" ? true : false} href="#portfolio">Portfolio</Nav.Link>
             <Nav.Link active={active === "" ? true : false} href="#d">Client</Nav.Link>
             <Nav.Link active={active === "" ? true : false} href="#s">Contact</Nav.Link>
           </Nav>

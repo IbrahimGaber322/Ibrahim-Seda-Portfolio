@@ -2,20 +2,25 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import Container from "react-bootstrap/Container";
-import Home from "./components/Home";
-import About from "./components/About";
-import Services from "./components/Services";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
 import Header from "./components/Header";
-import Summary from "./components/Summary";
+import Summary from "./pages/Summary";
 import BackToTop from "./components/BackToTop";
+import Portfolio from "./pages/Portfolio";
+import Testimonial from "./pages/Testimonial";
 
 function App() {
   return (
     <Container className="my-app" fluid>
+      <Header />
       <Home />
       <About />
       <Services />
       <Summary />
+      <Portfolio />
+      <Testimonial />
       <BackToTop />
     </Container>
   );

@@ -6,9 +6,9 @@ function AnimatedTitle(){
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["I'm Ibrahim Gaber.",
-       "I'm an Engineer.",
-       "I'm a web-developer."
+      strings: ["I'm Ibrahim Gaber",
+       "I'm an Engineer",
+       "I'm a web-developer"
     ],
       typeSpeed: 100,
       smartBackspace: true,

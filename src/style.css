@@ -29,7 +29,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    font-size: calc(1rem + 4vw) ;
+    font-size: calc(1rem + 2vw) ;
     width: fit-content;
 }
 
@@ -296,7 +296,7 @@
 
 /* Services */
 .my-services-page .back-title {
-    color: #3E444A !important;
+    color: #3E444A;
 }
 
 .my-services-page {
@@ -347,18 +347,6 @@
     color: #888A8C;
 }
 
-/* back-to-top */
-.back-to-top{
-    background-color: #1114186b ;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    border: 0;
-}
-.back-to-top:hover{
-    background-color: #1EAE84 ;
-}
-/* Skills */
 .skill-div{
     width: 100%;
 }
@@ -388,3 +376,118 @@
     font-weight: 500;
     padding: 0.8rem 3rem;
 }
+
+/* back-to-top */
+.back-to-top{
+    background-color: #1114186b ;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 0;
+}
+.back-to-top:hover{
+    background-color: #1EAE84 ;
+}
+
+
+/* Portfolio */
+
+.my-portfolio-page{
+   background-color: #343A40;
+}
+.my-portfolio-page .back-title {
+    color: #3A4046 ;
+}
+.gallery-nav-link {
+    color: white;
+    
+    position: relative;
+}
+.gallery-nav-link.active {
+    color: #20C997;
+
+}
+.gallery-nav-link:hover {
+    color: #20C997;
+   
+}
+
+.gallery-nav-link.active:after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #20C997;
+    position: absolute;
+    margin: auto;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+}
+@keyframes comeIn {
+    0% { transform: scale(0) }
+    75% { transform: scale(1.03) }
+    100% { transform: scale(1) }
+}
+
+.xmasonry .xblock {
+    animation: comeIn ease 0.5s;
+    animation-iteration-count: 1;
+    transition: left .3s ease, top .3s ease;
+   
+}
+.gallery-div{
+    margin: 1rem;
+}
+/* Testimonial */
+.my-testimonial-page{
+background-color: #212529;
+}
+.my-testimonial-page .back-title{
+  color: #292D32;
+}
+.my-slider-inner-div{
+    background-color: #111418;
+    height: fit-content;
+    border-radius: 1rem;
+    padding:3rem;
+    margin:2rem;
+}
+.my-slider-inner-div img{
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    object-fit: cover;
+    border: 0.1rem solid white;
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.slider-name{
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+.slider-location{
+    color: #6C757D;
+}
+.slider-desc{
+    margin-top: 3rem;
+    color: white;
+    font-size: 1rem;
+}
+.my-slider-inner-div svg{
+    color:yellow;
+}
+.slick-dots li button:before{
+    color: #000000 !important;
+    font-size: 1rem !important;
+   
+}
+.slick-dots li.slick-active button:before{
+    color: #1EAE84 !important;
+   font-size: 1rem;
+  
+}
+
+
