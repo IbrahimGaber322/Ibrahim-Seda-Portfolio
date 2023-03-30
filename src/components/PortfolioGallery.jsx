@@ -37,7 +37,7 @@ const PortfolioGallery = () => {
           </Nav>
         </Col>
         <Col className="mb-5">
-          <XMasonry maxColumns={3}>
+          <XMasonry targetBlockWidth="400" maxColumns={3}>
             {filteredImages.map((image) => {
               return (
                 <XBlock key={image.id}>

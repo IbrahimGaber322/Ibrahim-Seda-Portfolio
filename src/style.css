@@ -394,6 +394,7 @@
 
 .my-portfolio-page{
    background-color: #343A40;
+   
 }
 .my-portfolio-page .back-title {
     color: #3A4046 ;
@@ -437,10 +438,12 @@
 }
 .gallery-div{
     margin: 1rem;
+    
 }
 /* Testimonial */
 .my-testimonial-page{
 background-color: #212529;
+
 }
 .my-testimonial-page .back-title{
   color: #292D32;

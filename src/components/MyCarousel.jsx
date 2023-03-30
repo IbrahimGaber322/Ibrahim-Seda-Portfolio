@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import myPhoto from "../images/personal image 3-cropped.jpg"
 import StarIcon from '@mui/icons-material/Star';
-import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
+
 function MyCarousel() {
   
     var settings = {
