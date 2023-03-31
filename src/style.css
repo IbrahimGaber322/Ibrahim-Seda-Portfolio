@@ -40,7 +40,7 @@
     background: #20C997;
     position: absolute;
     margin: auto;
-    bottom: -5px;
+    bottom: -0.313rem;
     left: 0;
     right: 0;
 }
@@ -496,6 +496,7 @@ background-color: #212529;
 /* Contact */
 .my-contact-page{
     background-color: #343A40;
+    padding-bottom: 6%;
 }
 .my-contact-page .back-title {
     color:#3A4046;
@@ -591,4 +592,44 @@ margin-right: 0.5rem;
     .linkedin-icon{
         margin: 0 0 0 0.5rem;
     }
+}
+
+/* Footer */
+.footer{
+    background-color: #212529;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.footer-text{
+    color: white;
+    font-size: 1rem;  
+}
+.footer-text span{
+    color: #1BAA80;
+}
+.footer-nav{
+    justify-content: end;
+}
+@media only screen and (max-width: 768px) {
+    .footer-nav{
+        justify-content: center;
+    }
+    .footer-text{
+        text-align: center;
+    }
+    .footer{
+        
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+}
+.footer-nav a {
+    color: white ;
+}
+.footer-nav a:hover {
+    color: #1BAA80 ;
+}
+.footer-link-1{
+    border-right: 0.1rem solid rgba(0, 0, 0, 0.233);
+    
 }

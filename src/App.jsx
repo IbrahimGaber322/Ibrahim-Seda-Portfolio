@@ -11,6 +11,7 @@ import BackToTop from "./components/BackToTop";
 import Portfolio from "./pages/Portfolio";
 import Testimonial from "./pages/Testimonial";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Testimonial />
       <Contact />
       <BackToTop />
+      <Footer />
     </Container>
   );
 }
