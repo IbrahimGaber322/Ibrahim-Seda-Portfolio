@@ -5,7 +5,7 @@ import PortfolioGallery from "../components/PortfolioGallery";
 function Portfolio(){
     return <section id="portfolio" className="my-portfolio-page section-padding container-fluid">
         <Row>
-      <Col className="title-div mb-3 pb-3">
+      <Col className="title-div">
       <p className="title">My Work</p>
       <p className="back-title">PORTFOLIO</p>
       </Col>

@@ -7,7 +7,7 @@ function Testimonial(){
 return (
     <section id="testimonial" className="container-fluid my-testimonial-page section-padding">
     <Row>
-     <Col className="title-div mb-3 pb-3">
+     <Col className="title-div">
       <p className="title">Client Speak</p>
       <p className="back-title">TESTIMONIAL</p>
     </Col>

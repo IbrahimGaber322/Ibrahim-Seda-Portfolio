@@ -20,7 +20,7 @@
   }
 }
 .back-title{
-    font-size: calc(1.95rem + 6vw) ;
+    font-size: calc(1.95rem + 5vw) ;
     font-weight: 700; 
 }
 .title {
@@ -35,7 +35,7 @@
 
 .title:after {
     content: '';
-    height: 2px;
+    height: 0.125rem;
     width: 50%;
     background: #20C997;
     position: absolute;
@@ -453,12 +453,12 @@ background-color: #212529;
     height: fit-content;
     border-radius: 1rem;
     padding:3rem;
-    margin:2rem;
+    margin:1rem;
 }
 .my-slider-inner-div img{
     border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
     object-fit: cover;
     border: 0.1rem solid white;
     float: left;
@@ -493,4 +493,102 @@ background-color: #212529;
   
 }
 
+/* Contact */
+.my-contact-page{
+    background-color: #343A40;
+}
+.my-contact-page .back-title {
+    color:#3A4046;
+}
+.my-form-control{
+    background-color: #232A31;
+    border: 0;
+}
+.my-form-control:focus{
+    background-color: #232A31;
+    border: 0;
+    color: white;
+    box-shadow: 0 0 1rem #20C997 ;
+}
+.my-contact-page .btn {
+    width: fit-content;
+    font-size: 1rem;
+    background-color: #1BAA80;
+    font-weight: 500;
+    padding: 0.8rem 3rem;
+    border: 0;
+}
 
+.my-contact-page .btn:hover {
+    background-color: #0b443384;
+}
+
+.contacts-desc{
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+    overflow: hidden;
+    
+}
+.green-icon{
+    color: #20C896;
+    float: left;
+    margin-right: 0.5rem; 
+}
+.contacts-desc span{
+    font-size: 0.8rem;
+    
+}
+.facebook-icon{
+
+    color: rgba(255, 255, 255, 0.314);
+margin-right: 0.5rem;
+}
+.facebook-icon:hover{
+ color: #4267B2;
+  
+}
+
+.github-icon{
+    color: rgba(255, 255, 255, 0.314);
+   margin: 0 0.5rem;
+}
+.github-icon:hover{
+    color: #a5a2a2;
+}
+.instagram-icon{
+    color: rgba(255, 255, 255, 0.314);
+    margin: 0 0.5rem;
+}
+.instagram-icon:hover{
+    color: white;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    border-radius: 0.5rem;
+}
+.linkedin-icon{
+    color: rgba(255, 255, 255, 0.314);
+    margin: 0 0.5rem;
+}
+.linkedin-icon:hover{
+ color: #4267B2;   
+}
+@media only screen and (max-width: 768px) {
+    .contacts{
+        text-align: center;
+    }
+    .contacts-div{
+        display: flex;
+        justify-content: center;
+    }
+    .contacts-desc{
+        
+       width: fit-content;
+    }
+    .linkedin-icon{
+        margin: 0 0 0 0.5rem;
+    }
+}

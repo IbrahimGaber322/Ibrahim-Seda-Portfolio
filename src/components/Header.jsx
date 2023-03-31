@@ -77,8 +77,8 @@ function Header() {
             <Nav.Link active={active === "#services" ? true : false} href="#services">What I Do</Nav.Link>
             <Nav.Link active={active === "#summary" ? true : false} href="#summary">Resume</Nav.Link>
             <Nav.Link active={active === "#portfolio" ? true : false} href="#portfolio">Portfolio</Nav.Link>
-            <Nav.Link active={active === "" ? true : false} href="#d">Client</Nav.Link>
-            <Nav.Link active={active === "" ? true : false} href="#s">Contact</Nav.Link>
+            <Nav.Link active={active === "#testimonial" ? true : false} href="#testimonial">Client</Nav.Link>
+            <Nav.Link active={active === "#contact" ? true : false} href="#contact">Contact</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link className="facebook my-nav-icon" href="#deets">
