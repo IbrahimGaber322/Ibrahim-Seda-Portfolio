@@ -2,78 +2,64 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import myPhoto from "../images/personal image 3-cropped.jpg"
-import StarIcon from '@mui/icons-material/Star';
+import myPhoto from "../images/personal image 3-cropped.jpg";
+import MySlide from "./MySlide";
 
 function MyCarousel() {
-  
-    var settings = {
-      dots: true,
-      slidesToShow: 2,
-      slidesToScroll: 2,
-      arrows: false,
-     responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+  var settings = {
+    dots: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  return (
+    <div className="p-4">
+      <Slider {...settings}>
+        <MySlide
+          stars={5}
+          name="Ibrahim Gaber"
+          location="Cairo, Egypt"
+          desc="Only trying it out since a few days. But up to now excellent.
+                Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry."
+          photo={myPhoto}      
+        />
+        <MySlide
+          stars={5}
+          name="Ibrahim Gaber"
+          location="Cairo, Egypt"
+          desc="Only trying it out since a few days. But up to now excellent.
+                Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry."
+          photo={myPhoto}      
+        />
+        <MySlide
+          stars={5}
+          name="Ibrahim Gaber"
+          location="Cairo, Egypt"
+          desc="Only trying it out since a few days. But up to now excellent.
+                Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry."
+          photo={myPhoto}      
+        />
+        <MySlide
+          stars={5}
+          name="Ibrahim Gaber"
+          location="Cairo, Egypt"
+          desc="Only trying it out since a few days. But up to now excellent.
+                Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry."
+          photo={myPhoto}      
+        />
+      </Slider>
+      
+    </div>
+  );
+}
 
-          }
-        }
-      ]
-    };
-    return (
-     <div className="p-4">
-        <Slider  {...settings}>
-          <div>
-           <div className="my-slider-inner-div">
-            <div className="my-slider-title-div">
-              <img  src={myPhoto} alt="me" />
-              <p className="slider-name">Ibrahim Gaber</p>
-              <p className="slider-location">Developer from Egypt</p>
-            </div>
-            <p className="slider-desc">“I am happy Working with printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam persequeris essent possim iriure.”</p>
-            <StarIcon /><StarIcon /><StarIcon />
-            </div>
-         </div>
-         <div>
-           <div className="my-slider-inner-div">
-            <div className="my-slider-title-div">
-              <img  src={myPhoto} alt="me" />
-              <p className="slider-name">Ibrahim Gaber</p>
-              <p className="slider-location">Developer from Egypt</p>
-            </div>
-            <p className="slider-desc">“I am happy Working with printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam persequeris essent possim iriure.”</p>
-            <StarIcon /><StarIcon /><StarIcon />
-            </div>
-         </div>
-         <div>
-           <div className="my-slider-inner-div">
-            <div className="my-slider-title-div">
-              <img  src={myPhoto} alt="me" />
-              <p className="slider-name">Ibrahim Gaber</p>
-              <p className="slider-location">Developer from Egypt</p>
-            </div>
-            <p className="slider-desc">“I am happy Working with printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam persequeris essent possim iriure.”</p>
-            <StarIcon /><StarIcon /><StarIcon />
-            </div>
-         </div>
-         <div>
-           <div className="my-slider-inner-div">
-            <div className="my-slider-title-div">
-              <img  src={myPhoto} alt="me" />
-              <p className="slider-name">Ibrahim Gaber</p>
-              <p className="slider-location">Developer from Egypt</p>
-            </div>
-            <p className="slider-desc">“I am happy Working with printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam persequeris essent possim iriure.”</p>
-            <StarIcon /><StarIcon /><StarIcon />
-            </div>
-         </div>
-        </Slider>
-        </div>
-    );
-  }
-
-  export default MyCarousel;
-
+export default MyCarousel;

@@ -2,7 +2,8 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
-
+import Stat from "../components/Stat";
+import Info from "../components/Info";
 function About(){
     return <section id="about" className="container-fluid my-about-page section-padding">
     <Row>
@@ -26,29 +27,22 @@ function About(){
         </p>
       </Col>
       <Col>
-       <p className="my-info">Name: Ibrahim Gaber</p>
-      <p className="my-info">Email: <a href="">ibrahimseda322@gmail.com</a></p>
-      <p className="my-info">Age: 23</p>
-      <p className="my-info" style={{border:"none"}}> From: Cairo, Egypt</p>
+      <Info name="Ibrahim Gaber" email="ibrahimseda322@gmail.com" age="23" location="Cairo, Egypt" />
       <Button className="rounded-pill"  variant="success">Download CV</Button>
       </Col>
     </Row>
     <Row className="pt-3 mt-3">
       <Col xs={6} lg={3} className="stats-1">
-      <p className="stats-title">3+</p>
-      <p className="stats-desc">Months Experience</p>
+      <Stat title="3+" desc="Months Experience" />
       </Col>
       <Col xs={6} lg={3} className="stats-2">
-      <p className="stats-title">2</p>
-      <p className="stats-desc">Happy Clients</p>
+      <Stat title="2" desc="Happy Clients" />
       </Col>
       <Col xs={6} lg={3} className="stats-3">
-      <p className="stats-title">10+</p>
-      <p className="stats-desc">Projects Done</p>
+      <Stat title="10+" desc="Projects Done" />
       </Col>
       <Col xs={6} lg={3} className="stats-4">
-      <p className="stats-title">0</p>
-      <p className="stats-desc">Awards</p>
+      <Stat title="0" desc="Awards" />
       </Col>
     </Row>
   </section>
