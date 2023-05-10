@@ -2,7 +2,8 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
-import Stat from "../components/Stat";
+/* import Stat from "../components/Stat"; */
+import CV from "../cv/IbrahimGaber.pdf";
 import Info from "../components/Info";
 function About(){
     return <section id="about" className="container-fluid my-about-page section-padding">
@@ -16,22 +17,17 @@ function About(){
       <Col className="pb-4" lg={8}>
         <p className="desc-title">I'm <span>Ibrahim Gaber</span>, a Web Developer.</p>
         <p className="desc-text">
-          I help you build brand for your business at an affordable price.
-          Thousands of clients have procured exceptional results while
-          working with our dedicated team. when an unknown printer took a
-          galley of type and scrambled it to make a type specimen book.
+        I'm a junior web developer specializing in the MERN stack, dedicated to building brands and delivering affordable, high-quality web solutions. With a passion for creating exceptional online experiences, I craft captivating websites that leave a lasting impression.
          </p><p className="desc-text">
-          Delivering work within time and budget which meets client’s
-          requirements is our moto. Lorem Ipsum has been the industry's
-          standard dummy text ever when an unknown printer took a galley.
+         Continuously expanding my knowledge and skills, I stay updated with the latest web development trends. With creativity and attention to detail, I develop responsive web applications and optimize user interfaces. Let's collaborate to create a meaningful digital presence for your business.
         </p>
       </Col>
       <Col>
       <Info name="Ibrahim Gaber" email="ibrahimseda322@gmail.com" age="23" location="Cairo, Egypt" />
-      <Button className="rounded-pill"  variant="success">Download CV</Button>
+      <Button href={CV} download="IbrahimGaber" style={{color:'white'}} className="rounded-pill"  variant="success">Download CV</Button>
       </Col>
     </Row>
-    <Row className="pt-3 mt-3">
+   {/*  <Row className="pt-3 mt-3">
       <Col xs={6} lg={3} className="stats-1">
       <Stat title="3+" desc="Months Experience" />
       </Col>
@@ -44,7 +40,7 @@ function About(){
       <Col xs={6} lg={3} className="stats-4">
       <Stat title="0" desc="Awards" />
       </Col>
-    </Row>
+    </Row> */}
   </section>
 }
 

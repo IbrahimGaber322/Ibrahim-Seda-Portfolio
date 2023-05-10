@@ -81,13 +81,13 @@ function Header() {
             <Nav.Link active={active === "#contact" ? true : false} href="#contact">Contact</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link className="facebook my-nav-icon" href="#deets">
+            <Nav.Link className="facebook my-nav-icon" href="https://www.facebook.com/IbrahimGaber33">
               <FacebookIcon />
             </Nav.Link>
-            <Nav.Link className="linkedin my-nav-icon" href="#memes">
+            <Nav.Link className="linkedin my-nav-icon" href="https://www.linkedin.com/in/ibrahim-gaber-seda/">
               <LinkedInIcon />
             </Nav.Link>
-            <Nav.Link className="github my-nav-icon" href="#memes">
+            <Nav.Link className="github my-nav-icon" href="https://github.com/IbrahimGaber322">
               <GitHubIcon />
             </Nav.Link>
           </Nav>

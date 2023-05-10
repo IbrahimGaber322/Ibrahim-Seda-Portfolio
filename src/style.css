@@ -444,6 +444,36 @@
     margin: 1rem;
     
 }
+.project-card {
+    perspective: 1000px;
+  }
+  
+  .project-card .card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .project-card .card-front,
+  .project-card .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .project-card .card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .project-card.flipped .card-content {
+    transform: rotateY(180deg);
+  }
+  
 /* Testimonial */
 .my-testimonial-page{
 background-color: #212529;

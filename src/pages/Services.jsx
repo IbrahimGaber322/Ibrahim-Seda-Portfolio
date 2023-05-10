@@ -1,12 +1,11 @@
 import React from "react";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
-import PaletteIcon from '@mui/icons-material/Palette';
+import StorageIcon from '@mui/icons-material/Storage';
 import LaptopIcon from '@mui/icons-material/Laptop';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
-import BrushIcon from '@mui/icons-material/Brush';
-import AnalyticsIcon from '@mui/icons-material/Analytics';
-import CampaignIcon from '@mui/icons-material/Campaign';
+import HandymanIcon from '@mui/icons-material/Handyman';
+
 
 function Services(){
     return <section className="container-fluid my-services-page section-padding" id="services">
@@ -18,34 +17,24 @@ function Services(){
       </Row>
       <Row>
       <Col className="p-4 service" md={6}>
-      <PaletteIcon className="services-icon" />
-      <p className="service-title">Graphic Design</p>
-      <p className="service-desc">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-      </Col>
-      <Col className="p-4 service" md={6}>
        <LaptopIcon className="services-icon" />
-       <p className="service-title">Web Design</p>
-      <p className="service-desc">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
+       <p className="service-title">Web Developing</p>
+      <p className="service-desc">I can help you develope any website idea you want. Wether it's a static page or a fullstack website.</p>
       </Col>
       <Col className="p-4 service" md={6}>
       <DesignServicesIcon className="services-icon" />
       <p className="service-title">UI/UX Design</p>
-      <p className="service-desc">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
+      <p className="service-desc">I can work on the UI/UX design of your page although it won't be the best I can make it as professional as I can.</p>
       </Col>
       <Col className="p-4 service" md={6}>
-      <BrushIcon className="services-icon" />
-      <p className="service-title">App Design & Develop</p>
-      <p className="service-desc">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
+      <StorageIcon className="services-icon" />
+      <p className="service-title">Hosting</p>
+      <p className="service-desc">I can help you with the hosting of your website and follow up on it. As well as showing you all the availabe options and picking the best price range for your website needs.</p>
       </Col>
       <Col className="p-4 service" md={6}>
-      <AnalyticsIcon className="services-icon" />
-      <p className="service-title">Business Analysis</p>
-      <p className="service-desc">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-      </Col>
-      <Col className="p-4 service" md={6}>
-      <CampaignIcon className="services-icon" />
-      <p className="service-title">SEO Marketing</p>
-      <p className="service-desc">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
+      <HandymanIcon className="services-icon" />
+      <p className="service-title">Fixing Problems</p>
+      <p className="service-desc">I can help you fix problems in your existing MERN stack website.</p>
       </Col>
     </Row>
   </section> 
