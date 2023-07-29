@@ -37,13 +37,7 @@ function App() {
   };
 
   return (
-    <Container
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.365), black), url(${backgroundImage}`,
-      }}
-      className="my-app"
-      fluid
-    >
+    <>
       <img
         src={backgroundImage}
         alt="Background"
@@ -55,20 +49,28 @@ function App() {
           <div className="loader">Loading...</div>
         </div>
       ) : (
-        <>
-          <Header />
-          <Home />
-          <About />
-          <Services />
-          <Summary />
-          <Portfolio />
-          <Testimonial />
-          <Contact />
-          <BackToTop />
-          <Footer />
-        </>
+        <Container
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.365), black), url(${backgroundImage}`,
+          }}
+          className="my-app"
+          fluid
+        >
+          <>
+            <Header />
+            <Home />
+            <About />
+            <Services />
+            <Summary />
+            <Portfolio />
+            <Testimonial />
+            <Contact />
+            <BackToTop />
+            <Footer />
+          </>
+        </Container>
       )}
-    </Container>
+    </>
   );
 }
 
