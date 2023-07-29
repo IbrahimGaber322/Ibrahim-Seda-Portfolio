@@ -33,7 +33,7 @@ function App() {
 
   const [loading, setLoading] = useState(true);
   const handleBackgroundLoad = () => {
-    setLoading(false); 
+    setLoading(false);
   };
 
   return (
@@ -47,20 +47,27 @@ function App() {
       <img
         src={backgroundImage}
         alt="Background"
-        style={{ display: "none" }} 
+        style={{ display: "none" }}
         onLoad={handleBackgroundLoad}
       />
-      {loading&&<div className="loader-background"><div className="loader">Loading...</div></div>}
-      <Header />
-      <Home />
-      <About />
-      <Services />
-      <Summary />
-      <Portfolio />
-      <Testimonial />
-      <Contact />
-      <BackToTop />
-      <Footer />
+      {loading ? (
+        <div className="loader-background">
+          <div className="loader">Loading...</div>
+        </div>
+      ) : (
+        <>
+          <Header />
+          <Home />
+          <About />
+          <Services />
+          <Summary />
+          <Portfolio />
+          <Testimonial />
+          <Contact />
+          <BackToTop />
+          <Footer />
+        </>
+      )}
     </Container>
   );
 }
