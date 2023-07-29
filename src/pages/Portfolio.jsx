@@ -1,16 +1,75 @@
 import React, { useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import ReactCardFlip from "react-card-flip";
+import ProjectCard from "../components/ProjectCard";
 import WebWeave from "../images/WebWeave gif.gif";
-import { Button } from "react-bootstrap";
+import bitnine from "../images/bitnine.jpg";
+import alam from "../images/3alam.gif";
+import reiz from "../images/reiz.gif";
 
 function Portfolio() {
-  const [flipped, setFlipped] = useState(false);
-  const handleClick = (e) => {
-    e.preventDefault();
-    setFlipped(!flipped);
+  const [flipped, setFlipped] = useState({});
+
+  const projects = [
+    {
+      imgSrc: WebWeave,
+      keyFeatures: [
+        "Simple and User-Friendly Interface",
+        "Post Creation and Interaction",
+        "Profile Customization",
+        "Edit Your Posts",
+        "Complete Account Features",
+        "Expand Your Network",
+        "Real-time Friend Request Notifications",
+      ],
+      description:
+        "Join WebWeave today and explore the possibilities of meaningful online connections.",
+      visitLink: "https://webweave.onrender.com/",
+    },
+    {
+      imgSrc: bitnine,
+      keyFeatures: [
+        "Developed bilingual single-page website with captivating animations using React.",
+        "Created RESTful API server with Express and PostgreSQL, including user authentication.",
+        "Utilized essential packages for security and hosted PostgreSQL on Render.com.",
+        "Conducted comprehensive testing for reliable functionality.",
+      ],
+      description:
+        "Visit Bitnine and explore the captivating animations and functionality of this website.",
+      visitLink: "https://bitnine.onrender.com/",
+    },
+    {
+      imgSrc: alam,
+      keyFeatures: [
+        "Developed a unique and attractive company website using Next.js, React, and TypeScript.",
+        "Utilized server-side rendering for performance and SEO benefits.",
+        "Incorporated smooth animations and interactive elements for an enhanced user experience.",
+        "Implemented Material-UI icons and components for a consistent UI design.",
+      ],
+      description:
+        "Explore the attractive design and interactive elements of the 3alam company website.",
+      visitLink: "https://next-3r88-6pva73934-ibrahimgaber322.vercel.app/",
+    },
+    {
+      imgSrc: reiz,
+      keyFeatures: [
+        "Created a React web app for sorting countries by size, continent, and alphabetical order.",
+        "Utilized Material-UI and Emotion CSS-in-JS for a responsive UI.",
+        "Integrated restcountries.com API to fetch country data.",
+      ],
+      description:
+        "Explore the features and sorting functionality of the Countries web app.",
+      visitLink: "https://countries-ghr6.onrender.com/",
+    },
+  ];
+
+  const handleClick = (index) => {
+    setFlipped((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
   };
+
   return (
     <section
       id="portfolio"
@@ -23,44 +82,24 @@ function Portfolio() {
         </Col>
       </Row>
       <Row>
-        <Col style={{ display: "flex", justifyContent: "center" }}>
-          <ReactCardFlip
-            infinite
-            isFlipped={flipped}
-            flipDirection="horizontal"
+        {projects.map((project, index) => (
+          <Col
+            key={index}
+            xs={12}
+            lg={6}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: 10,
+            }}
           >
-            <div
-              style={{ borderRadius: 20, overflow: "hidden", maxWidth:1000 }}
-              onClick={handleClick}
-            >
-              <img width={'100%'} height={'auto'} style={{maxHeight:500}} src={WebWeave} alt="webweave" />
-            </div>
-
-            <div style={{ maxWidth: 1000, height: 'fit-content', borderRadius:20, padding:20,color:'white', backgroundColor:'#111418' }}>
-              <div onClick={handleClick}>
-                <h3><span style={{color:'#20C997'}}>Key</span> Features:</h3>
-                <ul>
-                  <li>Simple and <span style={{color:'#20C997'}}>User-Friendly</span> Interface</li>
-                  <li>Post <span style={{color:'#20C997'}}>Creation</span> and Interaction</li>
-                  <li>Profile <span style={{color:'#20C997'}}>Customization</span></li>
-                  <li><span style={{color:'#20C997'}}>Edit</span> Your Posts</li>
-                  <li>Complete <span style={{color:'#20C997'}}>Account</span> Features</li>
-                  <li>Expand Your <span style={{color:'#20C997'}}>Network</span></li>
-                  <li><span style={{color:'#20C997'}}>Real-time</span> Friend Request Notifications</li>
-                </ul>
-                <p className="text-center">
-                  Join <span style={{color:'#20C997'}}>WebWeave</span> today and explore the possibilities of
-                  meaningful online connections.
-                </p>
-              </div>
-              <div className="d-grid gap-2">
-      <Button href="https://webweave.onrender.com/" style={{color:'#20C997'}} variant="outline-dark" size="lg">
-        Visit WebWeave
-      </Button>
-    </div>
-            </div>
-          </ReactCardFlip>
-        </Col>
+            <ProjectCard
+              project={project}
+              isFlipped={flipped[index]}
+              onClick={() => handleClick(index)}
+            />
+          </Col>
+        ))}
       </Row>
     </section>
   );
