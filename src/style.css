@@ -749,7 +749,7 @@
 /*Loader*/
 
 .loader-background {
-    background: linear-gradient(rgba(0, 0, 0, 0.365), black);
+    background: linear-gradient(rgba(0, 0, 0, 0.365), rgb(0, 128, 128));
     width: 100vw;
     height: 100vh;
     display: flex;
