@@ -24,10 +24,10 @@ function Summary() {
           <Stack gap={3}>
             <div className="summary-card p-4 rounded">
               <p className="summary-date rounded">2017 - 2022</p>
-              <p className="title-2">Mechanical Power Engineering</p>
+              <p className="title-2">Engineering</p>
               <p className="title-3">Ain Shams University</p>
               <p className="summary-desc">
-                The Mechanical Engineering Department at Ain Shams University
+                The Engineering Department at Ain Shams University
                 provides a comprehensive education, blending theory and
                 practice. With experienced faculty, advanced laboratories, and a
                 focus on innovation, it paves the way for students to achieve
