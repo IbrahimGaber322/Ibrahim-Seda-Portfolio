@@ -1,43 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import { Button } from "react-bootstrap";
 
-function ProjectCard({ project, isFlipped, onClick }) {
+function ProjectCard({ project }) {
   const { imgSrc, keyFeatures, description, visitLink } = project;
+  const [flipped, setFlipped] = useState(false);
+  const handleClick = () => {
+    setFlipped(!flipped);
+  };
 
   return (
-    <ReactCardFlip
-      infinite
-      isFlipped={isFlipped}
-      flipDirection="horizontal"
-      containerStyle={{ width: "100%" }}
-    >
+    <ReactCardFlip infinite isFlipped={flipped} flipDirection="horizontal">
       {/* Front of the card */}
       <div
-        style={{ borderRadius: 20, overflow: "hidden", maxWidth: 1000 }}
-        onClick={onClick}
+        style={{ borderRadius: 20, overflow: "hidden", margin:5 }}
+        onClick={handleClick}
       >
-        <img
-          width={"100%"}
-          height={"auto"}
-          style={{ maxHeight: 400 }}
-          src={imgSrc}
-          alt="project"
-        />
+        <img width={"100%"} src={imgSrc} alt="project" />
       </div>
 
       {/* Back of the card */}
       <div
         style={{
-          maxWidth: 1000,
-          height: "fit-content",
           borderRadius: 20,
           padding: 15,
           color: "white",
           backgroundColor: "#111418",
         }}
       >
-        <div onClick={onClick}>
+        <div onClick={handleClick}>
           <h3>
             <span style={{ color: "#20C997" }}>Key</span> Features:
           </h3>

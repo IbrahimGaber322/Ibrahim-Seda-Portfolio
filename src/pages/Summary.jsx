@@ -99,6 +99,12 @@ function Summary() {
               </p>
               <ProgressBar className="my-progess-bar" now={90} />
             </div>
+            <div className="skill-div">
+              <p className="title-2">
+                Tailwind CSS<span>75%</span>
+              </p>
+              <ProgressBar className="my-progess-bar" now={75} />
+            </div>
           </Stack>
         </Col>
         <Col md={6}>
@@ -138,6 +144,12 @@ function Summary() {
                 JSON<span>90%</span>
               </p>
               <ProgressBar className="my-progess-bar" now={90} />
+            </div>
+            <div className="skill-div">
+              <p className="title-2">
+                Web Sockets/Hooks<span>70%</span>
+              </p>
+              <ProgressBar className="my-progess-bar" now={70} />
             </div>
           </Stack>
         </Col>

@@ -30,7 +30,7 @@ function MyCarousel() {
           stars={5}
           name="Mohamed Gaber"
           location="Software Engineer at EPAM Systems"
-          desc="I am thrilled to provide a testimonial for my younger brother, a junior web developer, as he begins his journey in the field. His enthusiasm, dedication, and ability to quickly grasp new concepts make him a standout developer. With his technical prowess, strong work ethic, and creative eye for design, I have no doubt he will excel and make significant contributions to any development team he joins."
+          desc="I'm excited to endorse my junior web developer brother. His enthusiasm, quick learning, and design flair set him apart. With strong skills and work ethic, he'll undoubtedly excel in any team he joins."
           photo={MohamedGaberPhoto}      
         />
         <MySlide

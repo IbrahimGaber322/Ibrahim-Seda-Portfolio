@@ -1,58 +1,61 @@
 import React, { useState } from "react";
-import Nav from 'react-bootstrap/Nav';
-import images from "./images";
+import Nav from "react-bootstrap/Nav";
 import { XMasonry, XBlock } from "react-xmasonry";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
+import projects from "../constants/projects";
+import ProjectCard from "./ProjectCard";
 
 const PortfolioGallery = () => {
-  const categories = ["All", "Designing", "Brand", "Photo"];
+  const categories = ["All", "Reactjs", "Reactjs + Nodejs", "Nextjs"];
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const [filteredImages, setFilteredImages] = useState(images);
+  const [filteredProjects, setFilteredProjects] = useState(projects);
+
+
+
+
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
-    setFilteredImages(
+    setFilteredProjects(
       category === "All"
-        ? images
-        : images.filter((image) => image.category?.includes(category))
+        ? projects
+        : projects.filter((project) => project.category?.includes(category))
     );
   };
   return (
     <>
       <Row>
-        <Col xxl={12} >
-        <Nav className="justify-content-center mb-5">
-          {categories.map((category) => (
-            <Nav.Item>
-          <Nav.Link key={category}
-              variant="outline-primary"
-              className="mx-2 gallery-nav-link"
-              active={selectedCategory === category}
-              onClick={() => handleCategoryClick(category)}>{category}</Nav.Link>
-        </Nav.Item>
-          ))}
+        <Col xxl={12}>
+          <Nav className="justify-content-center mb-5">
+            {categories.map((category) => (
+              <Nav.Item>
+                <Nav.Link
+                  key={category}
+                  variant="outline-primary"
+                  className="mx-2 gallery-nav-link"
+                  active={selectedCategory === category}
+                  onClick={() => handleCategoryClick(category)}
+                >
+                  {category}
+                </Nav.Link>
+              </Nav.Item>
+            ))}
           </Nav>
         </Col>
         <Col className="mb-5">
-          <XMasonry targetBlockWidth="400" maxColumns={3}>
-            {filteredImages.map((image) => {
+          <XMasonry maxColumns={2} targetBlockWidth={600}>
+            {filteredProjects.map((project) => {
               return (
-                <XBlock key={image.id}>
-                <div className="gallery-div">
-                <img
-                  className="w-100 rounded"
-                  src={image.src}
-                  alt={image.caption}
-                  onClick={handleCategoryClick}
-                />
-            </div>
+                <XBlock key={project.name}>
+                  <ProjectCard
+                    project={project}
+                  />
                 </XBlock>
               );
             })}
-            </XMasonry>
+          </XMasonry>
         </Col>
       </Row>
     </>
