@@ -11,8 +11,8 @@ function About(){
        const y = d.getFullYear();
        const m = d.getMonth();
        let age = y - birthYear;
-       if(m+1 > birthMonth){
-          age++;
+       if(m+1 < birthMonth){
+          age--;
        }
        return age;
    }
