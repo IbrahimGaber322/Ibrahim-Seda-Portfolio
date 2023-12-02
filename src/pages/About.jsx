@@ -6,6 +6,16 @@ import Col from 'react-bootstrap/Col'
 import CV from "../cv/IbrahimGaber.pdf";
 import Info from "../components/Info";
 function About(){
+   const calcAge = (birthYear, birthMonth) => {
+       const d = new Date();
+       const y = d.getFullYear();
+       const m = d.getMonth();
+       let age = y - birthYear;
+       if(m+1 > birthMonth){
+          age++;
+       }
+       return age;
+   }
     return <section id="about" className="container-fluid my-about-page section-padding">
     <Row>
      <Col className="title-div mb-3 pb-3">
@@ -23,7 +33,7 @@ function About(){
         </p>
       </Col>
       <Col>
-      <Info name="Ibrahim Gaber" email="ibrahimseda322@gmail.com" age="23" location="Cairo, Egypt" />
+      <Info name="Ibrahim Gaber" email="ibrahimseda322@gmail.com" age={calcAge(1999,8)} location="Cairo, Egypt" />
       <Button href={CV} download="IbrahimGaber" style={{color:'white'}} className="rounded-pill"  variant="success">Download CV</Button>
       </Col>
     </Row>
