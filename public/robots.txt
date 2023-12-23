@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /private/   # This directory contains private information
+Disallow: /admin/    # This directory is for administrative purposes
+
+User-agent: Googlebot
+Allow: /            # Allow Google to crawl the entire site
+
+Sitemap: https://ibrahimgaber.onrender.com/sitemap.xml   

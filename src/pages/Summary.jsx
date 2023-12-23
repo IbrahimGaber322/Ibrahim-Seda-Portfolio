@@ -3,8 +3,8 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Stack from "react-bootstrap/Stack";
-import ProgressBar from "react-bootstrap/ProgressBar";
 import CV from "../cv/IbrahimGaber.pdf";
+import Badge from "react-bootstrap/Badge";
 
 function Summary() {
   return (
@@ -27,11 +27,11 @@ function Summary() {
               <p className="title-2">Engineering</p>
               <p className="title-3">Ain Shams University</p>
               <p className="summary-desc">
-                The Engineering Department at Ain Shams University
-                provides a comprehensive education, blending theory and
-                practice. With experienced faculty, advanced laboratories, and a
-                focus on innovation, it paves the way for students to achieve
-                success in their engineering careers.
+                The Engineering Department at Ain Shams University provides a
+                comprehensive education, blending theory and practice. With
+                experienced faculty, advanced laboratories, and a focus on
+                innovation, it paves the way for students to achieve success in
+                their engineering careers.
               </p>
             </div>
           </Stack>
@@ -58,100 +58,120 @@ function Summary() {
         </Col>
       </Row>
       <Row className="mt-3 gx-5 ">
-        <Col xxl={12}>
-          <p className="title-2">My Skills</p>
+        <Col xxs={12} sm={3}>
+          <p className="title-2">Programming Languages</p>
+          <div
+            style={{ width: "100%", display: "flex", gap: 4, flexWrap: "wrap" }}
+          >
+            <Badge pill style={{ fontSize: 20 }} bg="success">
+              BashScript
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="primary">
+              C
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="secondary">
+              C++
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="danger">
+              JavaScript
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="info">
+              JQuery
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="warning">
+              TypeScript
+            </Badge>
+          </div>
         </Col>
-        <Col className="pb-3" md={6}>
-          <Stack gap={3}>
-            <div className="skill-div">
-              <p className="title-2">
-                HTML<span>80%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={80} />
-            </div>
-            <div className="skill-div">
-              <p className="title-2">
-                CSS<span>85%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={85} />
-            </div>
-            <div className="skill-div">
-              <p className="title-2">
-                JavaScript<span>80%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={80} />
-            </div>
-            <div className="skill-div">
-              <p className="title-2">
-                TypeScript<span>80%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={80} />
-            </div>
-            <div className="skill-div">
-              <p className="title-2">
-                React<span>90%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={90} />
-            </div>
-            <div className="skill-div">
-              <p className="title-2">
-                Next.js<span>90%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={90} />
-            </div>
-            <div className="skill-div">
-              <p className="title-2">
-                Tailwind CSS<span>75%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={75} />
-            </div>
-          </Stack>
+        <Col xxs={12} sm={3}>
+          <p className="title-2">FrontEnd Technologies</p>
+          <div
+            style={{ width: "100%", display: "flex", gap: 4, flexWrap: "wrap" }}
+          >
+            <Badge pill style={{ fontSize: 20 }} bg="success">
+              HTML
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="primary">
+              CSS
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="secondary">
+              Bootstrap
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="danger">
+              ReactJs
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="warning">
+              NextJs
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="dark">
+              Redux
+            </Badge>
+            <Badge pill style={{ fontSize: 20, color: "black" }} bg="light">
+              Material-U
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="info">
+              shadcn/ui
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="primary">
+              Tailwind CSS
+            </Badge>
+          </div>
         </Col>
-        <Col md={6}>
-          <Stack gap={3}>
-            <div className="skill-div">
-              <p className="title-2">
-                MongoDB<span>75%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={75} />
-            </div>
-            <div className="skill-div">
-              <p className="title-2">
-                ExpressJs<span>80%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={80} />
-            </div>
-            <div className="skill-div">
-              <p className="title-2">
-                NodeJs<span>80%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={80} />
-            </div>
-            <div className="skill-div">
-              <p className="title-2">
-                PostgreSQL<span>80%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={80} />
-            </div>
-            <div className="skill-div">
-              <p className="title-2">
-                Firebase<span>80%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={80} />
-            </div>
-            <div className="skill-div">
-              <p className="title-2">
-                JSON<span>90%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={90} />
-            </div>
-            <div className="skill-div">
-              <p className="title-2">
-                Web Sockets/Hooks<span>70%</span>
-              </p>
-              <ProgressBar className="my-progess-bar" now={70} />
-            </div>
-          </Stack>
+        <Col xxs={12} sm={3}>
+          <p className="title-2">BackEnd Technologies</p>
+          <div
+            style={{ width: "100%", display: "flex", gap: 4, flexWrap: "wrap" }}
+          >
+            <Badge pill style={{ fontSize: 20 }} bg="success">
+              NodeJs
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="primary">
+              ExpressJs
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="secondary">
+              NestJs
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="danger">
+              NextJs
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="warning">
+              NextJs
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="dark">
+              MongoDB
+            </Badge>
+            <Badge pill style={{ fontSize: 20, color: "black" }} bg="light">
+              PostgreSQL
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="info">
+              MySQL
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="primary">
+              Firebase
+            </Badge>
+          </div>
+        </Col>
+        <Col xxs={12} sm={3}>
+          <p className="title-2">Other Technologies</p>
+          <div
+            style={{ width: "100%", display: "flex", gap: 4, flexWrap: "wrap" }}
+          >
+            <Badge pill style={{ fontSize: 20 }} bg="success">
+              Git
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="primary">
+              Docker
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="secondary">
+              Socket.IO
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="danger">
+              Webhooks
+            </Badge>
+            <Badge pill style={{ fontSize: 20 }} bg="warning">
+              WordPress
+            </Badge>
+          </div>
         </Col>
         <Col className="text-center mt-5 mb-5" xxl={12}>
           <Button href={CV} download="IbrahimGaber" className="rounded-pill">

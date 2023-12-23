@@ -4,6 +4,9 @@ import alam from "../images/3alam.gif";
 import reiz from "../images/reiz.gif";
 import Threads from "../images/Threads.gif";
 import Tasks from "../images/Tasks.gif";
+import JavaScript from "../images/javascript.gif";
+import Knot from "../images/knot.gif";
+import Instatus from "../images/instatus.gif";
 const projects = [
   {
     name: "WebWeave",
@@ -48,7 +51,7 @@ const projects = [
     description:
       "Explore the attractive design and interactive elements of the 3alam company website.",
     visitLink: "https://next-3r88-6pva73934-ibrahimgaber322.vercel.app/",
-    category: ["Nextjs"],
+    category: ["NextJs"],
   },
   {
     name: "Countries",
@@ -76,7 +79,7 @@ const projects = [
     ],
     description: "Visit this amazing website now and check its many features!",
     visitLink: "https://threads-eight-ivory.vercel.app/",
-    category: ["Nextjs"],
+    category: ["NextJs"],
   },
   {
     name: "Tasks",
@@ -92,6 +95,49 @@ const projects = [
     description: "Visit now and manage your tasks!",
     visitLink: "https://tasks-kabg.onrender.com/",
     category: ["Reactjs + Nodejs"],
+  },
+  {
+    name: "JavaScript Functions",
+    imgSrc: JavaScript,
+    keyFeatures: [
+      "Explore age calculation, even/odd guessing, discount calculation, and more.",
+      "Frontend: Built using React.js and styled with Material-UI.",
+      "Navigate easily and interact intuitively.",
+      "Encapsulate each function for code reusability and maintenance.",
+    ],
+    visitLink: "https://iti-javascript.vercel.app/",
+    description: "Visit now and try different JavaScript functions!",
+    category: ["Reactjs"],
+  },
+  {
+    name: "KNOT (Link Manager)",
+    imgSrc: Knot,
+    keyFeatures: [
+      "Developed a comprehensive Link Manager Application that includes both frontend and backend components.",
+      "Frontend: Built using React.js and TypeScript, styled with Material-UI.",
+      "Backend: Utilized NestJs and MongoDB for seamless data management.",
+      "Seamless CRUD functionality for created links.",
+      "Implemented user authentication using Passport for best security.",
+      "Demonstrated proficiency in full-stack development, modern tech stacks, and integration practices.",
+    ],
+    visitLink: "https://knot-client.vercel.app/",
+    description: "Visit now and create your own links!",
+    category: ["Reactjs + NestJs"],
+  },
+  {
+    name: "Instatus",
+    imgSrc: Instatus,
+    keyFeatures: [
+      "Developed using NextJs and TypeScript.",
+      "Used TailWind Css for styling.",
+      "Made my custom components and used clone code for reusability.",
+      "Used NextJs API functionality to accept and send requests.",
+      "Used Prisma ORM with PostgreSQL for advanced data managment.",
+      "Data manipulation functionality and ability to export to Excel.",
+    ],
+    visitLink: "https://instatus-rosy.vercel.app/",
+    description: "Visit now and check this amazing tool !",
+    category: ["NextJs"],
   },
 ];
 

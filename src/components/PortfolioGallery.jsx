@@ -7,7 +7,7 @@ import projects from "../constants/projects";
 import ProjectCard from "./ProjectCard";
 
 const PortfolioGallery = () => {
-  const categories = ["All", "Reactjs", "Reactjs + Nodejs", "Nextjs"];
+  const categories = ["All", "Reactjs", "Reactjs + Nodejs", "Reactjs + NestJs", "NextJs"];
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const [filteredProjects, setFilteredProjects] = useState(projects);
