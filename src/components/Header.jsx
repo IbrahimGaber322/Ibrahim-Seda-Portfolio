@@ -74,10 +74,10 @@ function Header() {
           <Nav className="m-auto">
             <Nav.Link active={active === "#home" ? true : false} href="#home">Home</Nav.Link>
             <Nav.Link active={active === "#about" ? true : false} href="#about">About</Nav.Link>
-            <Nav.Link active={active === "#services" ? true : false} href="#services">What I Do</Nav.Link>
+            {/* <Nav.Link active={active === "#services" ? true : false} href="#services">What I Do</Nav.Link> */}
             <Nav.Link active={active === "#summary" ? true : false} href="#summary">Resume</Nav.Link>
             <Nav.Link active={active === "#portfolio" ? true : false} href="#portfolio">Portfolio</Nav.Link>
-            <Nav.Link active={active === "#testimonial" ? true : false} href="#testimonial">Client</Nav.Link>
+            {/* <Nav.Link active={active === "#testimonial" ? true : false} href="#testimonial">Client</Nav.Link> */}
             <Nav.Link active={active === "#contact" ? true : false} href="#contact">Contact</Nav.Link>
           </Nav>
           <Nav>

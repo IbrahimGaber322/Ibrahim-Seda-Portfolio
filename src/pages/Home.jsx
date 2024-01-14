@@ -26,11 +26,11 @@ function Home() {
       <Row className="p-4">
         <Col>
           <Button
-            href="#contact"
+            href="#portfolio"
             className="rounded-pill"
             variant="outline-success"
           >
-            Hire Me
+            See My Work
           </Button>
         </Col>
       </Row>

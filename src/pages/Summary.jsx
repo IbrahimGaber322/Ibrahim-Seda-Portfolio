@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Stack from "react-bootstrap/Stack";
 import CV from "../cv/IbrahimGaber.pdf";
 import Badge from "react-bootstrap/Badge";
+import skillsGroups, { getColors } from "../constants/skills";
 
 function Summary() {
   return (
@@ -21,11 +22,27 @@ function Summary() {
       <Row className="gx-5 gy-5">
         <Col md={6}>
           <p className="title-2">My Education</p>
+          <Stack style={{marginBottom:3}} gap={3}>
+            <div className="summary-card p-4 rounded">
+              <p className="summary-date rounded">2023 - 2024</p>
+              <p className="title-2">Open Source Software Engineer</p>
+              <a rel="noreferrer" target="_blank" href="https://iti.gov.eg/iti/9M/Intake%2044/intake-program-track/details/116" className="title-3-a">ITI (Information Technology Institute)</a>
+              <p className="summary-desc">
+                I'm a dedicated learner at ITI's 9-month Open Source track,
+                gaining hands-on experience in Agile Software Development,
+                Full-Stack Development, Database Management, Security,
+                Programming Languages, Web Development, Cloud Computing, and
+                contributing to the open-source community. Explore my dynamic
+                journey in technology, showcasing a diverse skill set and a
+                commitment to continuous improvement.
+              </p>
+            </div>
+          </Stack>
           <Stack gap={3}>
             <div className="summary-card p-4 rounded">
               <p className="summary-date rounded">2017 - 2022</p>
               <p className="title-2">Engineering</p>
-              <p className="title-3">Ain Shams University</p>
+              <a  rel="noreferrer" target="_blank" href="https://eng.asu.edu.eg/" className="title-3-a">Ain Shams University</a>
               <p className="summary-desc">
                 The Engineering Department at Ain Shams University provides a
                 comprehensive education, blending theory and practice. With
@@ -44,7 +61,7 @@ function Summary() {
               <p className="title-2">
                 The Complete 2023 Web Development Bootcamp
               </p>
-              <p className="title-3">Udemy</p>
+              <a  rel="noreferrer" target="_blank" href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" className="title-3-a">Udemy</a>
               <p className="summary-desc">
                 This web development course has equipped me with valuable skills
                 and knowledge. I have built 16 projects, mastered technologies
@@ -58,121 +75,33 @@ function Summary() {
         </Col>
       </Row>
       <Row className="mt-3 gx-5 ">
-        <Col xxs={12} sm={3}>
-          <p className="title-2">Programming Languages</p>
-          <div
-            style={{ width: "100%", display: "flex", gap: 4, flexWrap: "wrap" }}
-          >
-            <Badge pill style={{ fontSize: 20 }} bg="success">
-              BashScript
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="primary">
-              C
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="secondary">
-              C++
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="danger">
-              JavaScript
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="info">
-              JQuery
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="warning">
-              TypeScript
-            </Badge>
-          </div>
-        </Col>
-        <Col xxs={12} sm={3}>
-          <p className="title-2">FrontEnd Technologies</p>
-          <div
-            style={{ width: "100%", display: "flex", gap: 4, flexWrap: "wrap" }}
-          >
-            <Badge pill style={{ fontSize: 20 }} bg="success">
-              HTML
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="primary">
-              CSS
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="secondary">
-              Bootstrap
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="danger">
-              ReactJs
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="warning">
-              NextJs
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="dark">
-              Redux
-            </Badge>
-            <Badge pill style={{ fontSize: 20, color: "black" }} bg="light">
-              Material-U
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="info">
-              shadcn/ui
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="primary">
-              Tailwind CSS
-            </Badge>
-          </div>
-        </Col>
-        <Col xxs={12} sm={3}>
-          <p className="title-2">BackEnd Technologies</p>
-          <div
-            style={{ width: "100%", display: "flex", gap: 4, flexWrap: "wrap" }}
-          >
-            <Badge pill style={{ fontSize: 20 }} bg="success">
-              NodeJs
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="primary">
-              ExpressJs
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="secondary">
-              NestJs
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="danger">
-              NextJs
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="warning">
-              NextJs
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="dark">
-              MongoDB
-            </Badge>
-            <Badge pill style={{ fontSize: 20, color: "black" }} bg="light">
-              PostgreSQL
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="info">
-              MySQL
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="primary">
-              Firebase
-            </Badge>
-          </div>
-        </Col>
-        <Col xxs={12} sm={3}>
-          <p className="title-2">Other Technologies</p>
-          <div
-            style={{ width: "100%", display: "flex", gap: 4, flexWrap: "wrap" }}
-          >
-            <Badge pill style={{ fontSize: 20 }} bg="success">
-              Git
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="primary">
-              Docker
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="secondary">
-              Socket.IO
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="danger">
-              Webhooks
-            </Badge>
-            <Badge pill style={{ fontSize: 20 }} bg="warning">
-              WordPress
-            </Badge>
-          </div>
-        </Col>
+        {skillsGroups.map((group) => (
+          <Col xxs={12} sm={Math.ceil(12 / skillsGroups.length)}>
+            <p className="title-2">{group?.title}</p>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                gap: 4,
+                flexWrap: "wrap",
+              }}
+            >
+              {group?.skills?.map((s, j) => (
+                <Badge pill style={{ fontSize: 20 }} bg={getColors(j)}>
+                  <span
+                    style={{
+                      color: `${
+                        getColors(j) === "light" ? "black" : "inherit"
+                      }`,
+                    }}
+                  >
+                    {s}
+                  </span>
+                </Badge>
+              ))}
+            </div>
+          </Col>
+        ))}
         <Col className="text-center mt-5 mb-5" xxl={12}>
           <Button href={CV} download="IbrahimGaber" className="rounded-pill">
             Download CV

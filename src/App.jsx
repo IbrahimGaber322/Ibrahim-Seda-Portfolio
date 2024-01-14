@@ -4,12 +4,12 @@ import "./style.css";
 import Container from "react-bootstrap/Container";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Services from "./pages/Services";
+/* import Services from "./pages/Services"; */
 import Header from "./components/Header";
 import Summary from "./pages/Summary";
 import BackToTop from "./components/BackToTop";
 import Portfolio from "./pages/Portfolio";
-import Testimonial from "./pages/Testimonial";
+/* import Testimonial from "./pages/Testimonial"; */
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import background from "./images/back-ground.jpg";
@@ -60,10 +60,10 @@ function App() {
             <Header />
             <Home />
             <About />
-            <Services />
+            {/* <Services /> */}
             <Summary />
             <Portfolio />
-            <Testimonial />
+            {/* <Testimonial /> */}
             <Contact />
             <BackToTop />
             <Footer />

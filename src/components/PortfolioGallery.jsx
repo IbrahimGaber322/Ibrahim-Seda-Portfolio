@@ -7,14 +7,17 @@ import projects from "../constants/projects";
 import ProjectCard from "./ProjectCard";
 
 const PortfolioGallery = () => {
-  const categories = ["All", "Reactjs", "Reactjs + Nodejs", "Reactjs + NestJs", "NextJs"];
+  const categories = [
+    "All",
+    "Reactjs",
+    "Reactjs + Nodejs",
+    "Reactjs + NestJs",
+    "NextJs",
+    "WordPress",
+  ];
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const [filteredProjects, setFilteredProjects] = useState(projects);
-
-
-
-
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -49,9 +52,7 @@ const PortfolioGallery = () => {
             {filteredProjects.map((project) => {
               return (
                 <XBlock key={project.name}>
-                  <ProjectCard
-                    project={project}
-                  />
+                  <ProjectCard project={project} />
                 </XBlock>
               );
             })}
