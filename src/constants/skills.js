@@ -13,6 +13,7 @@ const skillsGroups = [
       "ReactJs",
       "NextJs",
       "Redux",
+      "Angular",
       "Material-U",
       "shadcn/ui",
       "Tailwind CSS",

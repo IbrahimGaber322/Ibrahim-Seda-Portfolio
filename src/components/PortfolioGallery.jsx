@@ -13,6 +13,7 @@ const PortfolioGallery = () => {
     "Reactjs + Nodejs",
     "Reactjs + NestJs",
     "NextJs",
+    "Angular",
     "WordPress",
   ];
   const [selectedCategory, setSelectedCategory] = useState("All");

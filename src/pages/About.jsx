@@ -27,7 +27,7 @@ function About(){
       <Col className="pb-4" lg={8}>
         <p className="desc-title">I'm <span>Ibrahim Gaber</span>, a Web Developer.</p>
         <p className="desc-text">
-        I'm a junior web developer specializing in the MERN stack, dedicated to building brands and delivering affordable, high-quality web solutions. With a passion for creating exceptional online experiences, I craft captivating websites that leave a lasting impression.
+        I'm a junior web developer specializing in the MEARN stack, dedicated to building brands and delivering affordable, high-quality web solutions. With a passion for creating exceptional online experiences, I craft captivating websites that leave a lasting impression.
          </p><p className="desc-text">
          Continuously expanding my knowledge and skills, I stay updated with the latest web development trends. With creativity and attention to detail, I develop responsive web applications and optimize user interfaces. Let's collaborate to create a meaningful digital presence for your business.
         </p>

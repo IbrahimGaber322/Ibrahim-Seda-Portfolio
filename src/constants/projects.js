@@ -8,6 +8,7 @@ import JavaScript from "../images/javascript.gif";
 import Knot from "../images/knot.gif";
 import Instatus from "../images/instatus.gif";
 import Technoboly from "../images/Technoboly.gif";
+import Montag from "../images/Montag.webp";
 const projects = [
   {
     name: "WebWeave",
@@ -154,6 +155,20 @@ const projects = [
       "Explore our e-commerce website with a wide range of products.",
     visitLink: "https://technoboly.com/",
     category: ["WordPress"],
+  },
+  {
+    name: "Montag",
+    imgSrc: Montag,
+    keyFeatures: [
+      "User Authentication and Authorization",
+      "Product Browsing and Viewing",
+      "Shopping Cart Functionality",
+      "Seamless Checkout Process",
+    ],
+    description:
+      "Montag is a simple ecommerce website developed using Angular, Angular Material, and Angular Bootstrap. Explore its features for a user-friendly online shopping experience.",
+    visitLink: "https://montag-client.vercel.app/home",
+    category: ["Angular"],
   },
 ];
 
