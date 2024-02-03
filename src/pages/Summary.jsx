@@ -20,29 +20,64 @@ function Summary() {
         </Col>
       </Row>
       <Row className="gx-5 gy-5">
-        <Col md={6}>
-          <p className="title-2">My Education</p>
-          <Stack style={{marginBottom:3}} gap={3}>
+        <Col xs={12}>
+          <p className="title-2">My Experience</p>
+          <Stack style={{ marginBottom: 3 }} gap={3}>
             <div className="summary-card p-4 rounded">
-              <p className="summary-date rounded">2023 - 2024</p>
-              <p className="title-2">Open Source Software Engineer</p>
-              <a rel="noreferrer" target="_blank" href="https://iti.gov.eg/iti/9M/Intake%2044/intake-program-track/details/116" className="title-3-a">ITI (Information Technology Institute)</a>
+              <p className="summary-date rounded">2023</p>
+              <p className="title-2">FullStack Software Engineer</p>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://iti.gov.eg/iti/9M/Intake%2044/intake-program-track/details/116"
+                className="title-3-a"
+              >
+                ITI (Information Technology Institute)
+              </a>
               <p className="summary-desc">
-                I'm a dedicated learner at ITI's 9-month Open Source track,
-                gaining hands-on experience in Agile Software Development,
-                Full-Stack Development, Database Management, Security,
-                Programming Languages, Web Development, Cloud Computing, and
-                contributing to the open-source community. Explore my dynamic
-                journey in technology, showcasing a diverse skill set and a
-                commitment to continuous improvement.
+                <ul>
+                  <li>
+                    Demonstrated expertise in both frontend (React/Angular) and
+                    backend (Node.js) technologies, leading end-to-end
+                    development of responsive web applications.
+                  </li>
+                  <li>
+                    Utilized modern technologies to create dynamic,
+                    user-friendly interfaces, contributing to the development of
+                    innovative and efficient web applications.
+                  </li>
+                  <li>
+                    Employed agile methodologies in collaborative teams,
+                    ensuring timely delivery of high-quality software solutions.
+                  </li>
+                  <li>
+                    Prioritized performance optimization and scalability,
+                    enhancing overall application efficiency and responsiveness.
+                  </li>
+                  <li>
+                    Resolved complex technical challenges, actively contributing
+                    to system innovation and the integration of new features and
+                    technologies.
+                  </li>
+                </ul>
               </p>
             </div>
           </Stack>
+        </Col>
+        <Col md={6}>
+          <p className="title-2">My Education</p>
           <Stack gap={3}>
             <div className="summary-card p-4 rounded">
               <p className="summary-date rounded">2017 - 2022</p>
               <p className="title-2">Engineering</p>
-              <a  rel="noreferrer" target="_blank" href="https://eng.asu.edu.eg/" className="title-3-a">Ain Shams University</a>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://eng.asu.edu.eg/"
+                className="title-3-a"
+              >
+                Ain Shams University
+              </a>
               <p className="summary-desc">
                 The Engineering Department at Ain Shams University provides a
                 comprehensive education, blending theory and practice. With
@@ -61,7 +96,14 @@ function Summary() {
               <p className="title-2">
                 The Complete 2023 Web Development Bootcamp
               </p>
-              <a  rel="noreferrer" target="_blank" href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" className="title-3-a">Udemy</a>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
+                className="title-3-a"
+              >
+                Udemy
+              </a>
               <p className="summary-desc">
                 This web development course has equipped me with valuable skills
                 and knowledge. I have built 16 projects, mastered technologies
