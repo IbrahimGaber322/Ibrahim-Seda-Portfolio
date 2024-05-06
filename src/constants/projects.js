@@ -9,6 +9,8 @@ import Knot from "../images/knot.gif";
 import Instatus from "../images/instatus.gif";
 import Technoboly from "../images/Technoboly.gif";
 import Montag from "../images/Montag.webp";
+import Bazaar from "../images/Bazaar.gif";
+import GoodReads from "../images/GoodReads.gif";
 const projects = [
   {
     name: "WebWeave",
@@ -25,7 +27,7 @@ const projects = [
     description:
       "Join WebWeave today and explore the possibilities of meaningful online connections.",
     visitLink: "https://webweave.onrender.com/",
-    category: ["Reactjs + Nodejs"],
+    category: "React + Nodejs",
   },
   {
     name: "Bitnine",
@@ -39,7 +41,7 @@ const projects = [
     description:
       "Visit Bitnine and explore the captivating animations and functionality of this website.",
     visitLink: "https://bitnine.onrender.com/",
-    category: ["Reactjs + Nodejs"],
+    category: "React + Nodejs",
   },
   /*  {
     name: "3alam",
@@ -66,7 +68,7 @@ const projects = [
     description:
       "Explore the features and sorting functionality of the Countries web app.",
     visitLink: "https://countries-ghr6.onrender.com/",
-    category: ["Reactjs"],
+    category: "React",
   },
   {
     name: "Threads",
@@ -81,7 +83,7 @@ const projects = [
     ],
     description: "Visit this amazing website now and check its many features!",
     visitLink: "https://threads-eight-ivory.vercel.app/",
-    category: ["NextJs"],
+    category: "NextJs",
   },
   {
     name: "Tasks",
@@ -96,7 +98,7 @@ const projects = [
     ],
     description: "Visit now and manage your tasks!",
     visitLink: "https://tasks-kabg.onrender.com/",
-    category: ["Reactjs + Nodejs"],
+    category: "React + Nodejs",
   },
   {
     name: "JavaScript Functions",
@@ -109,7 +111,7 @@ const projects = [
     ],
     visitLink: "https://iti-javascript.vercel.app/",
     description: "Visit now and try different JavaScript functions!",
-    category: ["Reactjs"],
+    category: "React",
   },
   {
     name: "KNOT (Link Manager)",
@@ -124,7 +126,7 @@ const projects = [
     ],
     visitLink: "https://knot-client.vercel.app/",
     description: "Visit now and create your own links!",
-    category: ["Reactjs + NestJs"],
+    category: "React + NestJs",
   },
   {
     name: "Instatus",
@@ -139,7 +141,7 @@ const projects = [
     ],
     visitLink: "https://instatus-rosy.vercel.app/",
     description: "Visit now and check this amazing tool !",
-    category: ["NextJs"],
+    category: "NextJs",
   },
   {
     name: "Technoboly",
@@ -154,7 +156,7 @@ const projects = [
     description:
       "Explore our e-commerce website with a wide range of products.",
     visitLink: "https://technoboly.com/",
-    category: ["WordPress"],
+    category: "WordPress",
   },
   {
     name: "Montag",
@@ -168,7 +170,35 @@ const projects = [
     description:
       "Montag is a simple ecommerce website developed using Angular, Angular Material, and Angular Bootstrap. Explore its features for a user-friendly online shopping experience.",
     visitLink: "https://montag-client.vercel.app/home",
-    category: ["Angular"],
+    category: "Angular",
+  },
+  {
+    name: "Bazaar",
+    imgSrc: Bazaar,
+    keyFeatures: [
+      "Robust product search, filtering, and pagination for an optimized shopping experience.",
+      "Secure and smooth checkout process integrated with Stripe.",
+      "Advanced user authentication using access tokens and refresh tokens.",
+      "Dynamic frontend built with React TypeScript and styled using Material-UI.",
+    ],
+    description:
+      "Explore the seamless and secure shopping experience at Bazaar, where efficiency meets modern e-commerce design. Tailored for user convenience, this platform offers a robust search system and secure payment options.",
+    visitLink: "https://bazaar-ydo9.onrender.com/",
+    category: "React + Django",
+  },
+  {
+    name: "GoodReads",
+    imgSrc: GoodReads,
+    keyFeatures: [
+      "Comprehensive admin panel for managing books, categories, and authors.",
+      "Personalized bookshelves for users to manage their reading status.",
+      "Secure cloud-based image hosting with Cloudinary.",
+      "User authentication secured by JWT for a protected browsing experience.",
+    ],
+    description:
+      " Dive into the vast collection at Good Reads. Manage your reading journey through a user-friendly interface designed to enrich your reading experience with reviews, personalized shelves, and secure browsing.",
+    visitLink: "https://good-reads-client-one.vercel.app/",
+    category: "Angular + NodeJs",
   },
 ];
 

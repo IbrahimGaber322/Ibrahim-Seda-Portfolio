@@ -24,8 +24,8 @@ function Summary() {
           <p className="title-2">My Experience</p>
           <Stack style={{ marginBottom: 3 }} gap={3}>
             <div className="summary-card p-4 rounded">
-              <p className="summary-date rounded">2023</p>
-              <p className="title-2">FullStack Software Engineer</p>
+              <p className="summary-date rounded">10/2023 to 6/2024</p>
+              <p className="title-2">Software Engineer</p>
               <a
                 rel="noreferrer"
                 target="_blank"
@@ -37,9 +37,9 @@ function Summary() {
               <p className="summary-desc">
                 <ul>
                   <li>
-                    Demonstrated expertise in both frontend (React/Angular) and
-                    backend (Node.js) technologies, leading end-to-end
-                    development of responsive web applications.
+                    Demonstrated expertise in both frontend and backend
+                    technologies, leading end-to-end development of responsive
+                    web applications.
                   </li>
                   <li>
                     Utilized modern technologies to create dynamic,

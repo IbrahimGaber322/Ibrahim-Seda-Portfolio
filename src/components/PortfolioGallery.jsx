@@ -9,11 +9,13 @@ import ProjectCard from "./ProjectCard";
 const PortfolioGallery = () => {
   const categories = [
     "All",
-    "Reactjs",
-    "Reactjs + Nodejs",
-    "Reactjs + NestJs",
+    "React",
+    "React + Nodejs",
+    "React + NestJs",
+    "React + Django",
     "NextJs",
     "Angular",
+    "Angular + NodeJs",
     "WordPress",
   ];
   const [selectedCategory, setSelectedCategory] = useState("All");

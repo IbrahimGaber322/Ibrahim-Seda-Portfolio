@@ -1,19 +1,28 @@
 const skillsGroups = [
   {
     title: "Programming Languages",
-    skills: ["BashScript", "C", "C++", "JavaScript", "TypeScript", "Java"],
+    skills: [
+      "BashScript",
+      "C",
+      "C++",
+      "JavaScript",
+      "TypeScript",
+      "Java",
+      "Python",
+      "PHP",
+      "Ruby",
+    ],
   },
   {
     title: "FrontEnd Technologies",
     skills: [
       "HTML",
       "CSS",
-      "JQuery",
-      "Bootstrap",
-      "ReactJs",
+      "React",
       "NextJs",
-      "Redux",
       "Angular",
+      "Vue",
+      "Bootstrap",
       "Material-U",
       "shadcn/ui",
       "Tailwind CSS",
@@ -26,7 +35,9 @@ const skillsGroups = [
       "ExpressJs",
       "NestJs",
       "NextJs",
-      "NextJs",
+      "Django",
+      "Ruby on Rails",
+      "Laravel",
       "MongoDB",
       "PostgreSQL",
       "MySQL",
@@ -35,7 +46,7 @@ const skillsGroups = [
   },
   {
     title: "Other Technologies",
-    skills: ["Git", "Docker", "Socket.IO", "Webhooks", "WordPress"],
+    skills: ["Git & Github", "Docker", "Linux"],
   },
 ];
 

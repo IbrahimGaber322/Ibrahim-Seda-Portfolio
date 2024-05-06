@@ -13,7 +13,7 @@ function ProjectCard({ project }) {
     <ReactCardFlip infinite isFlipped={flipped} flipDirection="horizontal">
       {/* Front of the card */}
       <div
-        style={{ borderRadius: 20, overflow: "hidden", margin:5 }}
+        style={{ borderRadius: 20, overflow: "hidden", margin: 5 }}
         onClick={handleClick}
       >
         <img width={"100%"} src={imgSrc} alt="project" />
@@ -24,6 +24,7 @@ function ProjectCard({ project }) {
         style={{
           borderRadius: 20,
           padding: 15,
+          margin: 10,
           color: "white",
           backgroundColor: "#111418",
         }}
