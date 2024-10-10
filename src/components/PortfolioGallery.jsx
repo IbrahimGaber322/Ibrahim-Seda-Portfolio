@@ -8,17 +8,15 @@ import ProjectCard from "./ProjectCard";
 import { debounce } from "lodash"; // Import lodash debounce
 
 const PortfolioGallery = () => {
-  const categories = [
-    "All",
-    "React",
-    "React + Nodejs",
-    "React + NestJs",
-    "React + Django",
-    "NextJs",
-    "Angular",
-    "Angular + NodeJs",
-    "WordPress",
-  ];
+  const categories = projects.reduce(
+    (acc, project) =>
+      project.category
+        ? acc.includes(project.category)
+          ? acc
+          : [...acc, project.category]
+        : acc,
+    ["All"]
+  );
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [filteredProjects, setFilteredProjects] = useState(projects);
 

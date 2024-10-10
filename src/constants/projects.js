@@ -1,14 +1,14 @@
 import WebWeave from "../images/WebWeave gif.gif";
-import bitnine from "../images/bitnine.jpg";
+/* import bitnine from "../images/bitnine.jpg"; */
 /* import alam from "../images/3alam.gif"; */
-import reiz from "../images/reiz.gif";
+/* import reiz from "../images/reiz.gif"; */
 import Threads from "../images/Threads.gif";
 import Tasks from "../images/Tasks.gif";
-import JavaScript from "../images/javascript.gif";
+/* import JavaScript from "../images/javascript.gif"; */
 import Knot from "../images/knot.gif";
 import Instatus from "../images/instatus.gif";
-import Technoboly from "../images/Technoboly.gif";
-import Montag from "../images/Montag.webp";
+/* import Technoboly from "../images/Technoboly.gif"; */
+/* import Montag from "../images/Montag.webp"; */
 import Bazaar from "../images/Bazaar.gif";
 import GoodReads from "../images/GoodReads.gif";
 const projects = [
@@ -29,7 +29,7 @@ const projects = [
     visitLink: "https://webweave.onrender.com/",
     category: "React + Nodejs",
   },
-  {
+/*   {
     name: "Bitnine",
     imgSrc: bitnine,
     keyFeatures: [
@@ -42,7 +42,7 @@ const projects = [
       "Visit Bitnine and explore the captivating animations and functionality of this website.",
     visitLink: "https://bitnine.onrender.com/",
     category: "React + Nodejs",
-  },
+  }, */
   /*  {
     name: "3alam",
     imgSrc: alam,
@@ -57,7 +57,7 @@ const projects = [
     visitLink: "https://next-3r88-6pva73934-ibrahimgaber322.vercel.app/",
     category: ["NextJs"],
   }, */
-  {
+/*   {
     name: "Countries",
     imgSrc: reiz,
     keyFeatures: [
@@ -69,7 +69,7 @@ const projects = [
       "Explore the features and sorting functionality of the Countries web app.",
     visitLink: "https://countries-ghr6.onrender.com/",
     category: "React",
-  },
+  }, */
   {
     name: "Threads",
     imgSrc: Threads,
@@ -100,7 +100,7 @@ const projects = [
     visitLink: "https://tasks-kabg.onrender.com/",
     category: "React + Nodejs",
   },
-  {
+ /*  {
     name: "JavaScript Functions",
     imgSrc: JavaScript,
     keyFeatures: [
@@ -112,7 +112,7 @@ const projects = [
     visitLink: "https://iti-javascript.vercel.app/",
     description: "Visit now and try different JavaScript functions!",
     category: "React",
-  },
+  }, */
   {
     name: "KNOT (Link Manager)",
     imgSrc: Knot,
@@ -143,7 +143,7 @@ const projects = [
     description: "Visit now and check this amazing tool !",
     category: "NextJs",
   },
-  {
+/*   {
     name: "Technoboly",
     imgSrc: Technoboly,
     keyFeatures: [
@@ -157,8 +157,8 @@ const projects = [
       "Explore our e-commerce website with a wide range of products.",
     visitLink: "https://technoboly.com/",
     category: "WordPress",
-  },
-  {
+  }, */
+/*   {
     name: "Montag",
     imgSrc: Montag,
     keyFeatures: [
@@ -171,7 +171,7 @@ const projects = [
       "Montag is a simple ecommerce website developed using Angular, Angular Material, and Angular Bootstrap. Explore its features for a user-friendly online shopping experience.",
     visitLink: "https://montag-client.vercel.app/home",
     category: "Angular",
-  },
+  }, */
   {
     name: "Bazaar",
     imgSrc: Bazaar,
