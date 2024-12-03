@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -11,28 +11,40 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Contact() {
   const form = useRef();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-  const handleSubmit = (e) =>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_j3hkp8f', 'template_fb32c1c', form.current, 'NzBf6yb2AcqJw_go1')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
+    const formData = new FormData(form.current);
+    try {
+      const result = await emailjs.sendForm(process.env.REACT_APP_EJS_SERVICE_ID, process.env.REACT_APP_EJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EJS_PUBLIC_KEY);
+      if (result.status === 200) {
+        toast.success(`Thanks ${formData.get('name')}, I'll get back to you`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    } catch (error) {
+      toast.error(`Sorry ${formData.get('name')}, something went wrong`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
       });
-    
-    setFormData({ name: "",email: "",message: ""});
+    }
+    form.current.reset();
   }
 
   return (
@@ -60,8 +72,6 @@ function Contact() {
                     className="my-form-control"
                     required={true}
                     name="name"
-                    onChange={handleChange}
-                    value={formData.name}
                     type="text"
                     placeholder="Name"
                   />
@@ -74,8 +84,6 @@ function Contact() {
                     className="my-form-control"
                     required={true}
                     name="email"
-                    onChange={handleChange}
-                    value={formData.email}
                     type="email"
                     placeholder="Enter email"
                   />
@@ -88,8 +96,6 @@ function Contact() {
                     className="my-form-control"
                     required={true}
                     name="message"
-                    onChange={handleChange}
-                    value={formData.message}
                     placeholder="Your message ..."
                     as="textarea"
                     rows={5}
@@ -137,6 +143,7 @@ function Contact() {
           </a>
         </Col>
       </Row>
+      <ToastContainer />
     </section>
   );
 }
