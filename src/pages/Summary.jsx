@@ -6,6 +6,7 @@ import Stack from "react-bootstrap/Stack";
 import CV from "../cv/IbrahimGaber.pdf";
 import Badge from "react-bootstrap/Badge";
 import skillsGroups, { getColors } from "../constants/skills";
+import SummaryCard from "../components/SummaryCard";
 
 function Summary() {
   return (
@@ -20,99 +21,64 @@ function Summary() {
         </Col>
       </Row>
       <Row className="gx-5 gy-5">
-        <Col xs={12}>
-          <p className="title-2">My Experience</p>
-          <Stack style={{ marginBottom: 3 }} gap={3}>
-            <div className="summary-card p-4 rounded">
-              <p className="summary-date rounded">10/2023 to 6/2024</p>
-              <p className="title-2">Software Engineer</p>
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://iti.gov.eg/iti/9M/Intake%2044/intake-program-track/details/116"
-                className="title-3-a"
-              >
-                ITI (Information Technology Institute)
-              </a>
-              <p className="summary-desc">
-                <ul>
-                  <li>
-                    Demonstrated expertise in both frontend and backend
-                    technologies, leading end-to-end development of responsive
-                    web applications.
-                  </li>
-                  <li>
-                    Utilized modern technologies to create dynamic,
-                    user-friendly interfaces, contributing to the development of
-                    innovative and efficient web applications.
-                  </li>
-                  <li>
-                    Employed agile methodologies in collaborative teams,
-                    ensuring timely delivery of high-quality software solutions.
-                  </li>
-                  <li>
-                    Prioritized performance optimization and scalability,
-                    enhancing overall application efficiency and responsiveness.
-                  </li>
-                  <li>
-                    Resolved complex technical challenges, actively contributing
-                    to system innovation and the integration of new features and
-                    technologies.
-                  </li>
-                </ul>
-              </p>
-            </div>
-          </Stack>
-        </Col>
         <Col md={6}>
           <p className="title-2">My Education</p>
           <Stack gap={3}>
-            <div className="summary-card p-4 rounded">
-              <p className="summary-date rounded">2017 - 2022</p>
-              <p className="title-2">Engineering</p>
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://eng.asu.edu.eg/"
-                className="title-3-a"
-              >
-                Ain Shams University
-              </a>
-              <p className="summary-desc">
-                The Engineering Department at Ain Shams University provides a
-                comprehensive education, blending theory and practice. With
-                experienced faculty, advanced laboratories, and a focus on
-                innovation, it paves the way for students to achieve success in
-                their engineering careers.
-              </p>
-            </div>
+            <SummaryCard title={"Software Engineer"} link={"https://iti.gov.eg/iti/9M/Intake%2044/intake-program-track/details/116"} dateFrom={"10/2023"} dateTo={"6/2024"} organization={"ITI (Information Technology Institute)"}
+              description={[
+                `Demonstrated expertise in both frontend and backend technologies, leading end-to-end development of responsive web applications.`,
+                `Utilized modern technologies to create dynamic, user-friendly interfaces, contributing to the development of innovative and efficient web applications.`,
+                `Employed agile methodologies in collaborative teams, ensuring timely delivery of high-quality software solutions.`,
+                `Prioritized performance optimization and scalability, enhancing overall application efficiency and responsiveness.`,
+                `Resolved complex technical challenges, actively contributing to system innovation and the integration of new features and technologies.`
+              ]}
+            />
+            <SummaryCard title={"The Complete 2023 Web Development Bootcamp"} link={"https://www.udemy.com/course/the-complete-web-development-bootcamp/"} dateFrom={"06/2022"} dateTo={"01/2023"} organization={"Udemy"}
+              description={[
+                `Built 16 projects, mastering technologies like JavaScript, React, and Node.`,
+                `Gained the ability to create any website, developing full-fledged websites and web apps.`,
+                `Worked as a freelance web developer, applying professional best practices.`
+              ]}
+            />
+            <SummaryCard title={"Engineering"} link={"https://eng.asu.edu.eg/"} dateFrom={"10/2017"} dateTo={"6/2022"} organization={"Ain Shams University"}
+              description={[
+                `Solved complex problems through critical thinking and advanced mathematics.`,
+                `Participated in numerous courses, gaining a broad understanding of various engineering disciplines.`,
+                `Engaged in multiple group projects, enhancing teamwork and collaboration skills.`,
+                `Learned to apply theoretical knowledge to practical situations, bridging the gap between academia and industry.`,
+                `Developed a strong foundation in engineering principles, preparing for a successful career in the field.`
+              ]}
+            />
           </Stack>
         </Col>
         <Col md={6}>
-          <p className="title-2">Courses</p>
+          <p className="title-2">My Experience</p>
           <Stack gap={3}>
-            <div className="summary-card p-4 rounded">
-              <p className="summary-date rounded">2023</p>
-              <p className="title-2">
-                The Complete 2023 Web Development Bootcamp
-              </p>
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
-                className="title-3-a"
-              >
-                Udemy
-              </a>
-              <p className="summary-desc">
-                This web development course has equipped me with valuable skills
-                and knowledge. I have built 16 projects, mastered technologies
-                like JavaScript, React, and Node, and gained the ability to
-                create any website. I can develop full-fledged websites and web
-                apps, work as a freelance web developer, and apply professional
-                best practices.
-              </p>
-            </div>
+            <SummaryCard title={"Software Engineer"} dateFrom={"10/2023"} organization={"Herrontech"} link={"https://herrontech.com/"}
+              description={[
+                `Contributed to the end-to-end development of responsive web applications, utilizing React for frontend, Node.js for backend, and MongoDB for database management.`,
+                `Created dynamic, user-friendly interfaces using modern technologies and Atomic Design principles, enhancing the functionality and efficiency of web applications.`,
+                `Collaborated within Agile teams to ensure the timely delivery of high-quality software solutions.`,
+                `Focused on optimizing performance and scalability, improving overall application efficiency and responsiveness.`
+              ]}
+            />
+            <SummaryCard title={"FullStack Software Engineer"} dateFrom={"12/2023"} dateTo={"6/2024"} organization={"Stryde"} link={"https://www.gostryde.com/"}
+              description={[
+                `Worked as a fullstack engineer at Stryde, a fintech startup based in UAE.`,
+                `Built the app from the ground up using Next.js and TypeScript.`,
+                `Utilized Prisma ORM with PostgreSQL for database modeling.`,
+                `Developed everything from database models to API routes to screens and designs.`
+              ]}
+            />
+            <SummaryCard title={"FreeLancer"} dateFrom={"01/2023"} dateTo={"10/2023"} organization={"Freelancer"}
+              description={[
+                `Developed responsive websites and web applications for clients, ensuring high-quality, user-friendly interfaces.`,
+                `Utilized modern technologies to create dynamic, efficient websites, contributing to client satisfaction and project success.`,
+                `Employed agile methodologies in project management, ensuring timely delivery of high-quality software solutions.`,
+                `Prioritized performance optimization and scalability, enhancing overall application efficiency and responsiveness.`,
+                `Resolved complex technical challenges, actively contributing to system innovation and the integration of new features and technologies.`
+              ]}
+            />
           </Stack>
         </Col>
       </Row>
@@ -132,9 +98,8 @@ function Summary() {
                 <Badge pill style={{ fontSize: 20 }} bg={getColors(j)}>
                   <span
                     style={{
-                      color: `${
-                        getColors(j) === "light" ? "black" : "inherit"
-                      }`,
+                      color: `${getColors(j) === "light" ? "black" : "inherit"
+                        }`,
                     }}
                   >
                     {s}

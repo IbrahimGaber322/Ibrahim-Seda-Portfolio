@@ -77,9 +77,11 @@
   margin-bottom: 10px;
   display: inline-block;
 }
+
 .title-3-a:hover {
   color: #32ffc5;
 }
+
 /* Nav-Bar */
 .my-navbar-brand {
   font-family: "Poppins", sans-serif;
@@ -172,6 +174,7 @@
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -593,6 +596,7 @@
 
 .my-form-control {
   background-color: #232a31;
+  color: white;
   border: 0;
 }
 
@@ -659,30 +663,24 @@
 .instagram-icon:hover {
   color: white;
   background: #f09433;
-  background: -moz-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  background: -webkit-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
+  background: -moz-linear-gradient(45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%);
+  background: -webkit-linear-gradient(45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%);
+  background: linear-gradient(45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
   border-radius: 0.5rem;
 }
@@ -714,6 +712,24 @@
     margin: 0 0 0 0.5rem;
   }
 }
+
+::placeholder {
+  color: white;
+  /* Or any visible color */
+  opacity: 1;
+  /* Ensure it's fully visible */
+}
+
+:-ms-input-placeholder {
+  /* For older IE versions */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* For Edge */
+  color: white;
+}
+
 
 /* Footer */
 .footer {

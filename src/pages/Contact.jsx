@@ -68,6 +68,7 @@ function Contact() {
               <Col lg={6}>
                 <Form.Group className="mb-3">
                   <Form.Control
+                    autoComplete="off"
                     style={{ color: "white" }}
                     className="my-form-control"
                     required={true}
@@ -80,6 +81,7 @@ function Contact() {
               <Col lg={6}>
                 <Form.Group className="mb-3">
                   <Form.Control
+                    autoComplete="off"
                     style={{ color: "white" }}
                     className="my-form-control"
                     required={true}
@@ -92,6 +94,7 @@ function Contact() {
               <Col>
                 <Form.Group className="mb-3">
                   <Form.Control
+                    autoComplete="off"
                     style={{ color: "white" }}
                     className="my-form-control"
                     required={true}
