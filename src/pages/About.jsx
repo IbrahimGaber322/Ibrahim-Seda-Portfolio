@@ -68,7 +68,7 @@ function About() {
       </Row>
       <Row className="pt-3 mt-3">
         <Col xs={6} lg={4} className="stats-1">
-          <Stat title="1+" desc="Years Experience" />
+          <Stat title="2+" desc="Years Experience" />
         </Col>
         <Col xs={6} lg={4} className="stats-2">
           <Stat title="5" desc="Happy Clients" />
