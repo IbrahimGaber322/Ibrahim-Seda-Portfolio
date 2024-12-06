@@ -596,7 +596,7 @@
 
 .my-form-control {
   background-color: #232a31;
-  color: white;
+  color: white !important;
   border: 0;
 }
 
