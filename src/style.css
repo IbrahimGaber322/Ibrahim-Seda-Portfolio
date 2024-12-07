@@ -600,6 +600,18 @@
   border: 0;
 }
 
+.my-form-control::placeholder {
+  color: white !important;
+  opacity: 1;
+}
+
+.my-form-control:focus {
+  background-color: #232a31;
+  border: 0;
+  color: white;
+  box-shadow: 0 0 1rem #20c997;
+}
+
 .my-form-control:focus {
   background-color: #232a31;
   border: 0;

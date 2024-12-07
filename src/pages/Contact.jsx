@@ -14,14 +14,19 @@ import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
 function Contact() {
   const form = useRef();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(form.current);
     try {
-      const result = await emailjs.sendForm(process.env.REACT_APP_EJS_SERVICE_ID, process.env.REACT_APP_EJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EJS_PUBLIC_KEY);
+      const result = await emailjs.sendForm(
+        process.env.REACT_APP_EJS_SERVICE_ID,
+        process.env.REACT_APP_EJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EJS_PUBLIC_KEY
+      );
       if (result.status === 200) {
         toast.success(`Thanks ${formData.get('name')}, I'll get back to you`, {
           position: "top-right",
@@ -45,7 +50,7 @@ function Contact() {
       });
     }
     form.current.reset();
-  }
+  };
 
   return (
     <section
@@ -69,9 +74,13 @@ function Contact() {
                 <Form.Group className="mb-3">
                   <Form.Control
                     autoComplete="off"
-                    style={{ color: "white" }}
+                    style={{
+                      color: "white",
+                      backgroundColor: "#232a31",
+                      "::placeholder": { color: "white" },
+                    }}
                     className="my-form-control"
-                    required={true}
+                    required
                     name="name"
                     type="text"
                     placeholder="Name"
@@ -82,9 +91,13 @@ function Contact() {
                 <Form.Group className="mb-3">
                   <Form.Control
                     autoComplete="off"
-                    style={{ color: "white" }}
+                    style={{
+                      color: "white",
+                      backgroundColor: "#232a31",
+                      "::placeholder": { color: "white" },
+                    }}
                     className="my-form-control"
-                    required={true}
+                    required
                     name="email"
                     type="email"
                     placeholder="Enter email"
@@ -95,9 +108,13 @@ function Contact() {
                 <Form.Group className="mb-3">
                   <Form.Control
                     autoComplete="off"
-                    style={{ color: "white" }}
+                    style={{
+                      color: "white",
+                      backgroundColor: "#232a31",
+                      "::placeholder": { color: "white" },
+                    }}
                     className="my-form-control"
-                    required={true}
+                    required
                     name="message"
                     placeholder="Your message ..."
                     as="textarea"
