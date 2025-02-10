@@ -24,7 +24,7 @@ function Summary() {
         <Col md={6}>
           <p className="title-2">My Education</p>
           <Stack gap={3}>
-            <SummaryCard title={"Software Engineer"} link={"https://iti.gov.eg/iti/9M/Intake%2044/intake-program-track/details/116"} dateFrom={"10/2023"} dateTo={"6/2024"} organization={"ITI (Information Technology Institute)"}
+            <SummaryCard title={"Software Engineer"} link={"https://iti.gov.eg/iti/9M/Intake%2044/intake-program-track/details/116"} dateFrom={"2023"} dateTo={"2024"} organization={"ITI (Information Technology Institute)"}
               description={[
                 `Demonstrated expertise in both frontend and backend technologies, leading end-to-end development of responsive web applications.`,
                 `Utilized modern technologies to create dynamic, user-friendly interfaces, contributing to the development of innovative and efficient web applications.`,
@@ -33,14 +33,14 @@ function Summary() {
                 `Resolved complex technical challenges, actively contributing to system innovation and the integration of new features and technologies.`
               ]}
             />
-            <SummaryCard title={"The Complete 2023 Web Development Bootcamp"} link={"https://www.udemy.com/course/the-complete-web-development-bootcamp/"} dateFrom={"06/2022"} dateTo={"01/2023"} organization={"Udemy"}
+            <SummaryCard title={"The Complete 2023 Web Development Bootcamp"} link={"https://www.udemy.com/course/the-complete-web-development-bootcamp/"} dateFrom={"2022"} dateTo={"2023"} organization={"Udemy"}
               description={[
                 `Built 16 projects, mastering technologies like JavaScript, React, and Node.`,
                 `Gained the ability to create any website, developing full-fledged websites and web apps.`,
                 `Worked as a freelance web developer, applying professional best practices.`
               ]}
             />
-            <SummaryCard title={"Engineering"} link={"https://eng.asu.edu.eg/"} dateFrom={"10/2017"} dateTo={"6/2022"} organization={"Ain Shams University"}
+            <SummaryCard title={"Engineering"} link={"https://eng.asu.edu.eg/"} dateFrom={"2017"} dateTo={"2022"} organization={"Ain Shams University"}
               description={[
                 `Solved complex problems through critical thinking and advanced mathematics.`,
                 `Participated in numerous courses, gaining a broad understanding of various engineering disciplines.`,
@@ -54,7 +54,7 @@ function Summary() {
         <Col md={6}>
           <p className="title-2">My Experience</p>
           <Stack gap={3}>
-            <SummaryCard title={"Software Engineer"} dateFrom={"10/2023"} organization={"Herrontech"} link={"https://herrontech.com/"}
+            <SummaryCard title={"Software Engineer"} dateFrom={"2024"} organization={"Herrontech"} link={"https://herrontech.com/"}
               description={[
                 `Contributed to the end-to-end development of responsive web applications, utilizing React for frontend, Node.js for backend, and MongoDB for database management.`,
                 `Created dynamic, user-friendly interfaces using modern technologies and Atomic Design principles, enhancing the functionality and efficiency of web applications.`,
@@ -62,21 +62,12 @@ function Summary() {
                 `Focused on optimizing performance and scalability, improving overall application efficiency and responsiveness.`
               ]}
             />
-            <SummaryCard title={"FullStack Software Engineer"} dateFrom={"12/2023"} dateTo={"6/2024"} organization={"Stryde"} link={"https://www.gostryde.com/"}
+            <SummaryCard title={"FullStack Software Engineer"} dateFrom={"2023"} dateTo={"2024"} organization={"Stryde"} link={"https://www.gostryde.com/"}
               description={[
                 `Worked as a fullstack engineer at Stryde, a fintech startup based in UAE.`,
                 `Built the app from the ground up using Next.js and TypeScript.`,
                 `Utilized Prisma ORM with PostgreSQL for database modeling.`,
                 `Developed everything from database models to API routes to screens and designs.`
-              ]}
-            />
-            <SummaryCard title={"FreeLancer"} dateFrom={"01/2023"} dateTo={"10/2023"} organization={"Freelancer"}
-              description={[
-                `Developed responsive websites and web applications for clients, ensuring high-quality, user-friendly interfaces.`,
-                `Utilized modern technologies to create dynamic, efficient websites, contributing to client satisfaction and project success.`,
-                `Employed agile methodologies in project management, ensuring timely delivery of high-quality software solutions.`,
-                `Prioritized performance optimization and scalability, enhancing overall application efficiency and responsiveness.`,
-                `Resolved complex technical challenges, actively contributing to system innovation and the integration of new features and technologies.`
               ]}
             />
           </Stack>
