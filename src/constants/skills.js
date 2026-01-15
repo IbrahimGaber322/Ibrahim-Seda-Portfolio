@@ -23,7 +23,7 @@ const skillsGroups = [
       "Angular",
       "Vue",
       "Bootstrap",
-      "Material-U",
+      "Material-UI",
       "shadcn/ui",
       "Tailwind CSS",
     ],
@@ -42,11 +42,31 @@ const skillsGroups = [
       "PostgreSQL",
       "MySQL",
       "Firebase",
+      "DynamoDB",
+    ],
+  },
+  {
+    title: "DevOps & Cloud",
+    skills: [
+      "AWS",
+      "Kubernetes",
+      "kubectl",
+      "Docker",
+      "CI/CD",
+      "GitHub Actions",
+      "Azure DevOps",
+      "Linux",
     ],
   },
   {
     title: "Other Technologies",
-    skills: ["Git & Github", "Docker", "Linux"],
+    skills: [
+      "Git & GitHub",
+      "Backstage",
+      "Datadog",
+      "DevLake",
+      "Agile / Scrum",
+    ],
   },
 ];
 
