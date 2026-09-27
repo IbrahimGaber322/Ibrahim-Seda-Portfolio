@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+  Source for public/icons/*. Rendered at 512x512 by headless Chrome:
+  icon.html          -> rounded, transparent corners (favicons, android)
+  icon.html#bleed    -> full-bleed square (apple-touch-icon, maskable)
+  icon.html#small    -> larger letters for 16/32px favicons
+-->
+<html>
+<head>
+<meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=block" rel="stylesheet" />
+<style>
+  html, body { margin: 0; width: 512px; height: 512px; background: transparent; overflow: hidden; }
+  .icon {
+    width: 512px; height: 512px; box-sizing: border-box;
+    border-radius: 112px;
+    background: linear-gradient(135deg, #34d399 0%, #22d3ee 100%);
+    display: grid; place-items: center;
+    font: 800 250px/1 "JetBrains Mono", monospace;
+    letter-spacing: -14px;
+    color: #04120d;
+  }
+  .bleed .icon { border-radius: 0; font-size: 210px; }
+  .small .icon { border-radius: 96px; font-size: 318px; letter-spacing: -22px; }
+</style>
+</head>
+<body>
+  <div class="icon"><span style="margin-left:-14px">IG</span></div>
+  <script>
+    if (location.hash) document.body.classList.add(location.hash.slice(1));
+  </script>
+</body>
+</html>

@@ -1,92 +1,75 @@
 const skillsGroups = [
   {
-    title: "Programming Languages",
+    title: "AI & LLM",
     skills: [
-      "BashScript",
-      "C",
-      "C++",
-      "JavaScript",
-      "TypeScript",
-      "Java",
-      "Python",
-      "PHP",
-      "Ruby",
+      "Claude Agent SDK",
+      "Anthropic API",
+      "Multi-agent orchestration",
+      "Embeddings",
+      "Vector search",
+      "Reranking",
+      "Prompt caching",
     ],
   },
   {
-    title: "FrontEnd Technologies",
+    title: "Backend",
     skills: [
-      "HTML",
-      "CSS",
-      "React",
-      "NextJs",
-      "Angular",
-      "Vue",
-      "Bootstrap",
-      "Material-UI",
-      "shadcn/ui",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    title: "BackEnd Technologies",
-    skills: [
-      "NodeJs",
-      "ExpressJs",
-      "NestJs",
-      "NextJs",
+      "Node.js",
+      "Express",
+      "NestJS",
+      "Next.js",
       "Django",
       "Ruby on Rails",
       "Laravel",
-      "MongoDB",
-      "PostgreSQL",
-      "MySQL",
-      "Firebase",
-      "DynamoDB",
+      "REST APIs",
+      "Webhooks",
     ],
   },
   {
-    title: "DevOps & Cloud",
+    title: "Frontend",
     skills: [
+      "React",
+      "Next.js",
+      "Angular",
+      "Vue",
+      "Tailwind CSS",
+      "Material UI",
+      "shadcn/ui",
+      "Bootstrap",
+    ],
+  },
+  {
+    title: "Databases",
+    skills: ["MongoDB", "PostgreSQL", "MySQL", "DynamoDB", "Firebase"],
+  },
+  {
+    title: "Cloud & DevOps",
+    skills: [
+      "Google Cloud Run",
+      "Cloud Build",
       "AWS",
       "Kubernetes",
-      "kubectl",
       "Docker",
-      "CI/CD",
       "GitHub Actions",
       "Azure DevOps",
+      "Datadog",
+      "Backstage",
       "Linux",
     ],
   },
   {
-    title: "Other Technologies",
+    title: "Languages",
     skills: [
-      "Git & GitHub",
-      "Backstage",
-      "Datadog",
-      "DevLake",
-      "Agile / Scrum",
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "Java",
+      "C / C++",
+      "PHP",
+      "Ruby",
+      "Bash",
     ],
   },
 ];
 
 export default skillsGroups;
-
-const colors = [
-  "success",
-  "primary",
-  "secondary",
-  "danger",
-  "warning",
-  "dark",
-  "light",
-  "info",
-];
-
-export const getColors = (i) => {
-  const n = Number(i);
-  if (isNaN(n)) return colors[0];
-  if (n < 0) return colors[0];
-  if (n < colors.length) return colors[n];
-  else return getColors(n - colors.length);
-};

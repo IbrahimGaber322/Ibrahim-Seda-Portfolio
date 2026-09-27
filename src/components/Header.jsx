@@ -1,99 +1,79 @@
-import React, { useState, useEffect} from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import MenuIcon from '@mui/icons-material/Menu';
+import React, { useEffect, useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import CV from "../cv/IbrahimGaber.pdf";
+
+const links = [
+  { id: "about", label: "About" },
+  { id: "services", label: "Services" },
+  { id: "experience", label: "Experience" },
+  { id: "featured", label: "Case study" },
+  { id: "portfolio", label: "Work" },
+  { id: "contact", label: "Contact" },
+];
 
 function Header() {
-  const [style, setStyle] = useState({ backgroundColor: "rgba(0, 0, 0, 0)", visibility:"visible"});
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
   const [active, setActive] = useState("home");
-  useEffect(() => {
-  const controlNavbar = () => {
-    let pos = window.scrollY;
-    if (typeof window !== "undefined") {
-      if (pos < 100) {
-        setStyle({ backgroundColor: "rgba(0, 0, 0, 0)", visibility:"visible" });
-      } else if (pos >= 80 && pos < 200) {
-        setStyle({ backgroundColor: "rgba(0, 0, 0, 0)", visibility:"hidden" });
-      } else if (pos >= 200) {
-        setStyle({ backgroundColor: "#111418", visibility:"visible", transition: "all 1s ease" });
-      }
-    }
-  }
-  controlNavbar();
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlNavbar);
-      window.addEventListener("resize", controlNavbar);
-      return () => {
-        window.removeEventListener("scroll", controlNavbar);
-        window.removeEventListener("resize", controlNavbar);
-      };
-    }
-    
-  },[]);
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      const currentScrollPos = window.scrollY;
-      let currentSectionId = "home";
-  
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (currentScrollPos >= sectionTop - sectionHeight / 2) {
-          currentSectionId = section.getAttribute("id");
-        }
-      });
-  
-      setActive(`#${currentSectionId}`);
-    };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
-    };
-  }, []);
-  return (
-    <Navbar
-      style={style}
-      className="my-nav-bar"
-       fixed="top"
-      collapseOnSelect
-      expand="lg"
 
-    >
-      <Container fluid>
-        <Navbar.Brand className="my-navbar-brand" href="#home">Ibrahim</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" ><MenuIcon style={{color:"white"}} /></Navbar.Toggle> 
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="m-auto">
-            <Nav.Link active={active === "#home" ? true : false} href="#home">Home</Nav.Link>
-            <Nav.Link active={active === "#about" ? true : false} href="#about">About</Nav.Link>
-            {/* <Nav.Link active={active === "#services" ? true : false} href="#services">What I Do</Nav.Link> */}
-            <Nav.Link active={active === "#summary" ? true : false} href="#summary">Resume</Nav.Link>
-            <Nav.Link active={active === "#portfolio" ? true : false} href="#portfolio">Portfolio</Nav.Link>
-            {/* <Nav.Link active={active === "#testimonial" ? true : false} href="#testimonial">Client</Nav.Link> */}
-            <Nav.Link active={active === "#contact" ? true : false} href="#contact">Contact</Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link className="facebook my-nav-icon" href="https://www.facebook.com/IbrahimGaber33">
-              <FacebookIcon />
-            </Nav.Link>
-            <Nav.Link className="linkedin my-nav-icon" href="https://www.linkedin.com/in/ibrahim-gaber-seda/">
-              <LinkedInIcon />
-            </Nav.Link>
-            <Nav.Link className="github my-nav-icon" href="https://github.com/IbrahimGaber322">
-              <GitHubIcon />
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px" }
+    );
+    document.querySelectorAll("section[id]").forEach((s) => io.observe(s));
+    return () => io.disconnect();
+  }, []);
+
+  const close = () => setOpen(false);
+
+  return (
+    <header className={`nav ${scrolled ? "nav--scrolled" : ""} ${open ? "nav--open" : ""}`}>
+      <div className="nav__inner">
+        <a href="#home" className="nav__brand" onClick={close}>
+          <span className="nav__logo">IG</span>
+          <span className="nav__name">Ibrahim Gaber</span>
+        </a>
+
+        <nav className="nav__links" aria-label="Primary">
+          {links.map((l) => (
+            <a
+              key={l.id}
+              href={`#${l.id}`}
+              onClick={close}
+              className={active === l.id ? "is-active" : undefined}
+            >
+              {l.label}
+            </a>
+          ))}
+          <a href={CV} download="IbrahimGaber-CV.pdf" className="btn btn--sm btn--primary nav__cta" onClick={close} data-umami-event="Download CV" data-umami-event-location="nav">
+            Resume
+          </a>
+        </nav>
+
+        <button
+          type="button"
+          className="nav__toggle"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+        >
+          {open ? <CloseIcon /> : <MenuIcon />}
+        </button>
+      </div>
+    </header>
   );
 }
 

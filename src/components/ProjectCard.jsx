@@ -1,60 +1,76 @@
-import React, { useState, memo } from "react";
-import ReactCardFlip from "react-card-flip";
-import { Button } from "react-bootstrap";
+import React, { memo } from "react";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import ZoomOutMapIcon from "@mui/icons-material/ZoomOutMap";
+import BrowserFrame from "./BrowserFrame";
 
-// Wrap the ProjectCard with React.memo to prevent unnecessary re-renders
-const ProjectCard = memo(({ project }) => {
-  const { imgSrc, keyFeatures, description, visitLink } = project;
-  const [flipped, setFlipped] = useState(false);
-
-  const handleClick = () => {
-    setFlipped(!flipped);
-  };
+const ProjectCard = memo(({ project, onPreview }) => {
+  const { name, kind, imgSrc, description, keyFeatures, stack, visitLink, repos = [] } = project;
 
   return (
-    <ReactCardFlip infinite isFlipped={flipped} flipDirection="horizontal">
-      {/* Front of the card */}
-      <div
-        style={{ borderRadius: 20, overflow: "hidden", margin: 5 }}
-        onClick={handleClick}
+    <article className="card project reveal">
+      <button
+        type="button"
+        className="project__media"
+        onClick={() => onPreview(project)}
+        aria-label={`Preview ${name}`}
+        data-umami-event="Project preview"
+        data-umami-event-project={name}
       >
-        <img width={"100%"} src={imgSrc} alt="project" loading="lazy" />{" "}
-        {/* Lazy loading images */}
-      </div>
-
-      {/* Back of the card */}
-      <div
-        style={{
-          borderRadius: 20,
-          padding: 15,
-          margin: 10,
-          color: "white",
-          backgroundColor: "#111418",
-        }}
-        onClick={handleClick}
-      >
-        <h3>
-          <span style={{ color: "#20C997" }}>Key</span> Features:
+        <BrowserFrame url={visitLink}>
+          <img src={imgSrc} alt={`${name} preview`} loading="lazy" decoding="async" />
+        </BrowserFrame>
+        <span className="project__zoom">
+          <ZoomOutMapIcon fontSize="inherit" /> Preview
+        </span>
+      </button>
+      <div className="project__body">
+        <p className="eyebrow eyebrow--sm">{kind}</p>
+        <h3 className="project__title">
+          <a href={visitLink} target="_blank" rel="noreferrer">
+            {name} <ArrowOutwardIcon fontSize="inherit" />
+          </a>
         </h3>
-        <ul>
-          {keyFeatures.map((feature, index) => (
-            <li key={index}>{feature}</li>
+        <p className="project__desc">{description}</p>
+        <ul className="project__features">
+          {keyFeatures.map((f) => (
+            <li key={f}>{f}</li>
           ))}
         </ul>
-        <p className="text-center">{description}</p>
-        <div className="d-grid gap-2">
-          <Button
+        <ul className="tags">
+          {stack.map((t) => (
+            <li key={t} className="tag">
+              {t}
+            </li>
+          ))}
+        </ul>
+        <div className="project__links">
+          <a
             href={visitLink}
             target="_blank"
-            style={{ color: "#20C997" }}
-            variant="outline-dark"
-            size="lg"
+            rel="noreferrer"
+            className="btn btn--sm btn--primary"
+            data-umami-event="Project live demo"
+            data-umami-event-project={name}
           >
-            Visit Project
-          </Button>
+            Live demo <ArrowOutwardIcon fontSize="inherit" />
+          </a>
+          {repos.map((r) => (
+            <a
+              key={r.url}
+              href={r.url}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn--sm btn--ghost"
+              data-umami-event="Project code"
+              data-umami-event-project={name}
+            >
+              <GitHubIcon fontSize="inherit" /> {r.label}
+            </a>
+          ))}
         </div>
       </div>
-    </ReactCardFlip>
+    </article>
   );
 });
 

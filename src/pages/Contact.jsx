@@ -1,25 +1,56 @@
-import React, { useRef } from "react";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import React, { useEffect, useRef, useState } from "react";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import EmailIcon from "@mui/icons-material/Email";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import GitHubIcon from "@mui/icons-material/GitHub";
+import SendIcon from "@mui/icons-material/Send";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import ScheduleIcon from "@mui/icons-material/Schedule";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import SectionHeading from "../components/SectionHeading";
+import profile from "../constants/profile";
+
+const channels = [
+  { icon: EmailOutlinedIcon, label: "Email", value: profile.email, href: `mailto:${profile.email}` },
+  { icon: WhatsAppIcon, label: "WhatsApp", value: profile.phone, href: profile.whatsapp },
+  { icon: LinkedInIcon, label: "LinkedIn", value: "in/ibrahim-gaber-seda", href: profile.socials.linkedin },
+  { icon: GitHubIcon, label: "GitHub", value: "IbrahimGaber322", href: profile.socials.github },
+];
+
+function LocalTime() {
+  const fmt = () =>
+    new Date().toLocaleTimeString("en-GB", { timeZone: "Africa/Cairo", hour: "2-digit", minute: "2-digit" });
+  const [time, setTime] = useState(fmt);
+  useEffect(() => {
+    const id = setInterval(() => setTime(fmt()), 15000);
+    return () => clearInterval(id);
+  }, []);
+  return (
+    <p className="local-time">
+      <ScheduleIcon fontSize="inherit" /> It's <strong>{time}</strong> in Cairo (GMT+3). I usually reply within a day.
+    </p>
+  );
+}
 
 function Contact() {
   const form = useRef();
+  const [sending, setSending] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(profile.email);
+      toast.success("Email copied to clipboard");
+    } catch {
+      toast.info(profile.email);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(form.current);
+    setSending(true);
     try {
       const result = await emailjs.sendForm(
         process.env.REACT_APP_EJS_SERVICE_ID,
@@ -28,142 +59,80 @@ function Contact() {
         process.env.REACT_APP_EJS_PUBLIC_KEY
       );
       if (result.status === 200) {
-        toast.success(`Thanks ${formData.get('name')}, I'll get back to you`, {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success(`Thanks ${formData.get("name")}, I'll get back to you soon.`);
+        form.current.reset();
       }
     } catch (error) {
-      toast.error(`Sorry ${formData.get('name')}, something went wrong`, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error(`Sorry ${formData.get("name")}, something went wrong. Please email me directly.`);
+    } finally {
+      setSending(false);
     }
-    form.current.reset();
   };
 
   return (
-    <section
-      id="contact"
-      className="container-fluid my-contact-page section-padding"
-    >
-      <Row>
-        <Col className="title-div mb-3 pb-3">
-          <p className="title">Get in Touch</p>
-          <p className="back-title">CONTACT</p>
-        </Col>
-      </Row>
-      <Row className="gy-4">
-        <Col md={{ span: 8, order: 2 }}>
-          <Form ref={form} onSubmit={handleSubmit}>
-            <Row>
-              <Col xxl={12}>
-                <p className="title-2">Send Me an E-mail</p>
-              </Col>
-              <Col lg={6}>
-                <Form.Group className="mb-3">
-                  <Form.Control
-                    autoComplete="off"
-                    style={{
-                      color: "white",
-                      backgroundColor: "#232a31",
-                      "::placeholder": { color: "white" },
-                    }}
-                    className="my-form-control"
-                    required
-                    name="name"
-                    type="text"
-                    placeholder="Name"
-                  />
-                </Form.Group>
-              </Col>
-              <Col lg={6}>
-                <Form.Group className="mb-3">
-                  <Form.Control
-                    autoComplete="off"
-                    style={{
-                      color: "white",
-                      backgroundColor: "#232a31",
-                      "::placeholder": { color: "white" },
-                    }}
-                    className="my-form-control"
-                    required
-                    name="email"
-                    type="email"
-                    placeholder="Enter email"
-                  />
-                </Form.Group>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3">
-                  <Form.Control
-                    autoComplete="off"
-                    style={{
-                      color: "white",
-                      backgroundColor: "#232a31",
-                      "::placeholder": { color: "white" },
-                    }}
-                    className="my-form-control"
-                    required
-                    name="message"
-                    placeholder="Your message ..."
-                    as="textarea"
-                    rows={5}
-                  />
-                </Form.Group>
-              </Col>
-              <Col className="text-center" xxl={12}>
-                <Button type="submit" className="rounded-pill">
-                  Send Message
-                </Button>
-              </Col>
-            </Row>
-          </Form>
-        </Col>
-        <Col className="contacts" md={{ span: 4, order: 1 }}>
-          <p className="title-2">My Contacts</p>
-          <div className="contacts-div">
-            <LocalPhoneIcon className="green-icon" />
-            <p className="contacts-desc">(+20) 1099782953</p>
+    <section id="contact" className="section">
+      <div className="container">
+        <SectionHeading index="08" eyebrow="Contact" title="Let's build something together.">
+          Open to interesting roles, collaborations and freelance work. The fastest way to reach
+          me is email.
+        </SectionHeading>
+
+        <div className="contact">
+          <div className="contact__side reveal">
+            <ul className="contact__channels">
+              {channels.map(({ icon: Icon, label, value, href }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="card channel"
+                    data-umami-event={`Contact ${label}`}
+                  >
+                    <span className="channel__icon">
+                      <Icon fontSize="small" />
+                    </span>
+                    <span>
+                      <small>{label}</small>
+                      <strong>{value}</strong>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <button
+              type="button"
+              className="btn btn--ghost btn--sm copy-email"
+              onClick={copyEmail}
+              data-umami-event="Copy email"
+            >
+              <ContentCopyIcon fontSize="inherit" /> Copy email address
+            </button>
+            <LocalTime />
           </div>
-          <div className="contacts-div">
-            <WhatsAppIcon className="green-icon" />
-            <p className="contacts-desc">(+20) 1099782953</p>
-          </div>
-          <div className="contacts-div">
-            <EmailIcon className="green-icon" />
-            <p className="contacts-desc">
-              ibrahimseda322
-              <br />
-              <span>@gmail.com</span>
-            </p>
-          </div>
-          <p className="title-2">Follow Me</p>
-          <a href="https://www.facebook.com/IbrahimGaber33">
-            <FacebookIcon fontSize="large" className="facebook-icon" />
-          </a>
-          <a href="https://www.instagram.com/ibrahim_gaber_seda/">
-            <InstagramIcon fontSize="large" className="instagram-icon" />
-          </a>
-          <a href="https://github.com/IbrahimGaber322">
-            <GitHubIcon fontSize="large" className="github-icon" />
-          </a>
-          <a href="https://www.linkedin.com/in/ibrahim-gaber-seda/">
-            <LinkedInIcon fontSize="large" className="linkedin-icon" />
-          </a>
-        </Col>
-      </Row>
-      <ToastContainer />
+
+          <form ref={form} onSubmit={handleSubmit} className="card contact__form reveal">
+            <div className="field-row">
+              <label className="field">
+                <span>Name</span>
+                <input required name="name" type="text" autoComplete="name" placeholder="Jane Doe" />
+              </label>
+              <label className="field">
+                <span>Email</span>
+                <input required name="email" type="email" autoComplete="email" placeholder="jane@company.com" />
+              </label>
+            </div>
+            <label className="field">
+              <span>Message</span>
+              <textarea required name="message" rows={5} placeholder="Tell me about your project or role…" />
+            </label>
+            <button type="submit" className="btn btn--primary" disabled={sending} data-umami-event="Contact form submit">
+              {sending ? "Sending…" : "Send message"} <SendIcon fontSize="small" />
+            </button>
+          </form>
+        </div>
+      </div>
+      <ToastContainer position="bottom-right" theme="dark" autoClose={5000} />
     </section>
   );
 }

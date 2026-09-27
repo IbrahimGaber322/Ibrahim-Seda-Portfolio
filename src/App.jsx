@@ -1,75 +1,56 @@
-import React, { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useEffect } from "react";
 import "./style.css";
-import Container from "react-bootstrap/Container";
+import "./sections.css";
+import Header from "./components/Header";
+import ScrollProgress from "./components/ScrollProgress";
 import Home from "./pages/Home";
 import About from "./pages/About";
-/* import Services from "./pages/Services"; */
-import Header from "./components/Header";
-import Summary from "./pages/Summary";
-import BackToTop from "./components/BackToTop";
+import Services from "./pages/Services";
+import Experience from "./pages/Experience";
+import Featured from "./pages/Featured";
+import Skills from "./pages/Skills";
 import Portfolio from "./pages/Portfolio";
-/* import Testimonial from "./pages/Testimonial"; */
+import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
-import background from "./images/back-ground.jpg";
-import backgroundMob from "./images/back-ground-mob.jpg";
+import BackToTop from "./components/BackToTop";
+import useReveal from "./hooks/useReveal";
+import useSmoothScroll from "./hooks/useSmoothScroll";
+import useSpotlight from "./hooks/useSpotlight";
+import { loadAnalytics } from "./analytics";
 
 function App() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  useReveal();
+  useSmoothScroll();
+  useSpotlight();
 
   useEffect(() => {
-    const updateScreenWidth = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", updateScreenWidth);
-
-    return () => {
-      window.removeEventListener("resize", updateScreenWidth);
-    };
+    loadAnalytics();
+    console.log(
+      "%cHey, fellow developer 👋%c\nLike what you see? Let's talk: ibrahimseda322@gmail.com",
+      "font: 700 16px Inter, sans-serif; color: #34d399",
+      "font: 13px Inter, sans-serif; color: #8e97a6"
+    );
   }, []);
-  const backgroundImage = screenWidth > 576 ? background : backgroundMob;
-
-  const [loading, setLoading] = useState(true);
-  const handleBackgroundLoad = () => {
-    setLoading(false);
-  };
 
   return (
     <>
-      <img
-        src={backgroundImage}
-        alt="Background"
-        style={{ display: "none" }}
-        onLoad={handleBackgroundLoad}
-      />
-      {loading ? (
-        <div className="loader-background">
-          <div className="loader">Loading...</div>
-        </div>
-      ) : (
-        <Container
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.365), black), url(${backgroundImage}`,
-          }}
-          className="my-app"
-          fluid
-        >
-          <>
-            <Header />
-            <Home />
-            <About />
-            {/* <Services /> */}
-            <Summary />
-            <Portfolio />
-            {/* <Testimonial /> */}
-            <Contact />
-            <BackToTop />
-            <Footer />
-          </>
-        </Container>
-      )}
+      <div className="bg-decor" aria-hidden="true" />
+      <ScrollProgress />
+      <Header />
+      <main>
+        <Home />
+        <About />
+        <Services />
+        <Experience />
+        <Featured />
+        <Skills />
+        <Portfolio />
+        <Testimonials />
+        <Contact />
+      </main>
+      <Footer />
+      <BackToTop />
     </>
   );
 }

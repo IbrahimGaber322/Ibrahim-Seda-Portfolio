@@ -1,115 +1,126 @@
-import WebWeave from "../images/WebWeave gif.gif";
-import Threads from "../images/Threads.gif";
+import WebWeave from "../images/WebWeave.webp";
+import Threads from "../images/Threads.webp";
 import Tasks from "../images/Tasks.gif";
 import Knot from "../images/knot.gif";
 import Instatus from "../images/instatus.gif";
 import Bazaar from "../images/Bazaar.gif";
 import GoodReads from "../images/GoodReads.gif";
+
 const projects = [
   {
-    name: "WebWeave",
-    imgSrc: WebWeave,
-    keyFeatures: [
-      "Simple and User-Friendly Interface",
-      "Post Creation and Interaction",
-      "Profile Customization",
-      "Edit Your Posts",
-      "Complete Account Features",
-      "Expand Your Network",
-      "Real-time Friend Request Notifications",
-    ],
-    description:
-      "Join WebWeave today and explore the possibilities of meaningful online connections.",
-    visitLink: "https://webweave.onrender.com/",
-    category: "React + Nodejs",
-  },
-  {
-    name: "Threads",
-    imgSrc: Threads,
-    keyFeatures: [
-      "Developed and launched a Twitter clone called Threads using Next.js with TypeScript, Shadcn, Tailwind CSS, Clerk for user authentication, webhooks, and FileUploadThing for image uploads.",
-      "Created a user-friendly interface with responsive design to mimic Twitter's functionality.",
-      "Integrated Clerk for secure user authentication and real-time updates via webhooks.",
-      "Implemented image upload feature using FileUploadThing.",
-      "Utilized modern tech stack including Next.js, TypeScript, Shadcn, Tailwind CSS, and webhooks.",
-      "Deployed the project on Vercel for seamless user experience.",
-    ],
-    description: "Visit this amazing website now and check its many features!",
-    visitLink: "https://threads-eight-ivory.vercel.app/",
-    category: "NextJs",
-  },
-  {
-    name: "Tasks",
-    imgSrc: Tasks,
-    keyFeatures: [
-      "Developed a comprehensive Task Manager Application that includes both frontend and backend components.",
-      "Frontend: Built using React.js and TypeScript, styled with Material-UI.",
-      "Backend: Utilized Node.js, Express.js, and MongoDB for seamless data management.",
-      "Incorporated features such as task creation, completion, deletion, editing, filtering, and sorting.",
-      "Implemented user authentication, task sharing, comments, and data validation for security.",
-      "Demonstrated proficiency in full-stack development, modern tech stacks, and integration practices.",
-    ],
-    description: "Visit now and manage your tasks!",
-    visitLink: "https://tasks-kabg.onrender.com/",
-    category: "React + Nodejs",
-  },
-  {
-    name: "KNOT (Link Manager)",
-    imgSrc: Knot,
-    keyFeatures: [
-      "Developed a comprehensive Link Manager Application that includes both frontend and backend components.",
-      "Frontend: Built using React.js and TypeScript, styled with Material-UI.",
-      "Backend: Utilized NestJs and MongoDB for seamless data management.",
-      "Seamless CRUD functionality for created links.",
-      "Implemented user authentication using Passport for best security.",
-      "Demonstrated proficiency in full-stack development, modern tech stacks, and integration practices.",
-    ],
-    visitLink: "https://knot-client.vercel.app/",
-    description: "Visit now and create your own links!",
-    category: "React + NestJs",
-  },
-  {
-    name: "Instatus",
-    imgSrc: Instatus,
-    keyFeatures: [
-      "Developed using NextJs and TypeScript.",
-      "Used TailWind Css for styling.",
-      "Made my custom components and used clone code for reusability.",
-      "Used NextJs API functionality to accept and send requests.",
-      "Used Prisma ORM with PostgreSQL for advanced data managment.",
-      "Data manipulation functionality and ability to export to Excel.",
-    ],
-    visitLink: "https://instatus-rosy.vercel.app/",
-    description: "Visit now and check this amazing tool !",
-    category: "NextJs",
-  },
-  {
     name: "Bazaar",
+    kind: "E-commerce",
     imgSrc: Bazaar,
-    keyFeatures: [
-      "Robust product search, filtering, and pagination for an optimized shopping experience.",
-      "Secure and smooth checkout process integrated with Stripe.",
-      "Advanced user authentication using access tokens and refresh tokens.",
-      "Dynamic frontend built with React TypeScript and styled using Material-UI.",
-    ],
     description:
-      "Explore the seamless and secure shopping experience at Bazaar, where efficiency meets modern e-commerce design. Tailored for user convenience, this platform offers a robust search system and secure payment options.",
+      "A full e-commerce store with product search, filtering and pagination, Stripe checkout and access/refresh-token authentication.",
+    keyFeatures: [
+      "Search, filtering and pagination tuned for a fast shopping flow",
+      "Secure Stripe checkout",
+      "Access + refresh token authentication",
+    ],
+    stack: ["React", "TypeScript", "Django", "MySQL", "Stripe"],
     visitLink: "https://bazaar-ydo9.onrender.com/",
+    repos: [
+      { label: "Frontend", url: "https://github.com/IbrahimGaber322/ecommerce-client" },
+      { label: "Backend", url: "https://github.com/IbrahimGaber322/ecommerce-server" },
+    ],
     category: "React + Django",
   },
   {
-    name: "GoodReads",
-    imgSrc: GoodReads,
-    keyFeatures: [
-      "Comprehensive admin panel for managing books, categories, and authors.",
-      "Personalized bookshelves for users to manage their reading status.",
-      "Secure cloud-based image hosting with Cloudinary.",
-      "User authentication secured by JWT for a protected browsing experience.",
-    ],
+    name: "Threads",
+    kind: "Social platform",
+    imgSrc: Threads,
     description:
-      " Dive into the vast collection at Good Reads. Manage your reading journey through a user-friendly interface designed to enrich your reading experience with reviews, personalized shelves, and secure browsing.",
+      "A Twitter clone with secure authentication, image uploads and a responsive interface, deployed on Vercel.",
+    keyFeatures: [
+      "Clerk authentication with real-time updates via webhooks",
+      "Image uploads with UploadThing",
+      "Responsive UI with shadcn/ui and Tailwind CSS",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Clerk"],
+    visitLink: "https://threads-eight-ivory.vercel.app/",
+    repos: [{ label: "Code", url: "https://github.com/IbrahimGaber322/threads" }],
+    category: "Next.js",
+  },
+  {
+    name: "WebWeave",
+    kind: "Social network",
+    imgSrc: WebWeave,
+    description:
+      "A MERN social network with posts, profiles, friend requests and real-time notifications.",
+    keyFeatures: [
+      "Post creation, editing and interactions",
+      "Profile customization and networking",
+      "Real-time friend request notifications",
+    ],
+    stack: ["React", "Node.js", "Express", "MongoDB", "Material UI"],
+    visitLink: "https://webweave.onrender.com/",
+    repos: [{ label: "Code", url: "https://github.com/IbrahimGaber322/WebWeave" }],
+    category: "React + Node.js",
+  },
+  {
+    name: "Good Reads",
+    kind: "Bookstore",
+    imgSrc: GoodReads,
+    description:
+      "A bookstore with personalized shelves and an admin panel for managing books, categories and authors.",
+    keyFeatures: [
+      "Admin panel for books, categories and authors",
+      "Personal shelves with reading status",
+      "Cloudinary image hosting and JWT auth",
+    ],
+    stack: ["Angular", "Node.js", "Express", "MongoDB", "Cloudinary"],
     visitLink: "https://good-reads-client-one.vercel.app/",
-    category: "Angular + NodeJs",
+    repos: [
+      { label: "Frontend", url: "https://github.com/IbrahimGaber322/good_reads_client" },
+      { label: "Backend", url: "https://github.com/IbrahimGaber322/my_good_reads_server" },
+    ],
+    category: "Angular + Node.js",
+  },
+  {
+    name: "KNOT",
+    kind: "Link manager",
+    imgSrc: Knot,
+    description:
+      "A link manager with full CRUD for saved links and Passport-based authentication.",
+    keyFeatures: [
+      "CRUD for links",
+      "Passport authentication",
+      "Typed React frontend with Material UI",
+    ],
+    stack: ["React", "TypeScript", "NestJS", "MongoDB", "Passport"],
+    visitLink: "https://knot-client.vercel.app/",
+    category: "React + NestJS",
+  },
+  {
+    name: "Instatus",
+    kind: "Admin tool",
+    imgSrc: Instatus,
+    description:
+      "A data management tool with custom reusable components, data manipulation and Excel export, built on Next.js API routes.",
+    keyFeatures: [
+      "Next.js API routes",
+      "Prisma ORM on PostgreSQL",
+      "Export data to Excel",
+    ],
+    stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    visitLink: "https://instatus-rosy.vercel.app/",
+    category: "Next.js",
+  },
+  {
+    name: "Tasks",
+    kind: "Productivity",
+    imgSrc: Tasks,
+    description:
+      "A task manager with sharing, comments, filtering and sorting, backed by a Node.js API.",
+    keyFeatures: [
+      "Create, edit, complete, filter and sort tasks",
+      "Task sharing and comments",
+      "Authentication and data validation",
+    ],
+    stack: ["React", "TypeScript", "Node.js", "Express", "MongoDB"],
+    visitLink: "https://tasks-kabg.onrender.com/",
+    category: "React + Node.js",
   },
 ];
 

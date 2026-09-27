@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--
+  Source for src/cv/IbrahimGaber.pdf.
+  Regenerate with:  npm run cv
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Ibrahim Gaber - CV</title>
+<style>
+  @page { size: A4; margin: 12mm 13mm 12mm 13mm; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Cambria", "Georgia", "Times New Roman", serif;
+    font-size: 10.1pt;
+    line-height: 1.32;
+    color: #1a1a1a;
+  }
+  a { color: inherit; text-decoration: none; }
+  header { text-align: center; margin-bottom: 6pt; }
+  h1 { font-size: 23pt; margin: 0; letter-spacing: .3pt; }
+  .role { font-style: italic; font-size: 12.5pt; margin: 1pt 0 5pt; color: #333; }
+  .contact { font-size: 9.2pt; color: #222; }
+  .contact span { white-space: nowrap; }
+  .contact span + span::before { content: "·"; margin: 0 6pt; color: #888; }
+  .contact a { border-bottom: 1px dotted #999; }
+  h2 {
+    font-size: 11.5pt; letter-spacing: 1pt; text-transform: uppercase;
+    margin: 9pt 0 4pt; padding-bottom: 1.5pt; border-bottom: 1.6pt solid #111;
+  }
+  .entry { margin-bottom: 5pt; break-inside: avoid; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .entry-title { font-weight: bold; }
+  .entry-sub { font-style: italic; color: #333; }
+  .meta { text-align: right; white-space: nowrap; font-size: 9.4pt; }
+  ul { margin: 2pt 0 0; padding-left: 13pt; }
+  li { margin: 0 0 1.2pt; }
+  p { margin: 0; }
+  .skills p { margin-bottom: 2.4pt; display: grid; grid-template-columns: 92pt 1fr; }
+  .links { font-size: 9.2pt; }
+  .links a { border-bottom: 1px dotted #999; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Ibrahim Gaber</h1>
+  <p class="role">Technical Lead &amp; Full Stack Software Engineer</p>
+  <p class="contact">
+    <span><a href="mailto:ibrahimseda322@gmail.com">ibrahimseda322@gmail.com</a></span>
+    <span>(+20) 1099782953</span>
+    <span>Cairo, Egypt</span>
+    <span><a href="https://ibrahimgaber.onrender.com/">ibrahimgaber.onrender.com</a></span>
+    <span><a href="https://www.linkedin.com/in/ibrahim-gaber-seda/">linkedin.com/in/ibrahim-gaber-seda</a></span>
+    <span><a href="https://github.com/IbrahimGaber322">github.com/IbrahimGaber322</a></span>
+    <span>Military service: Exempted</span>
+  </p>
+</header>
+
+<h2>Summary</h2>
+<p>
+  Full Stack Software Engineer and Technical Lead with 2+ years of experience building production web platforms
+  with Node.js, TypeScript, React and Next.js across AWS and Google Cloud. Currently leading the architecture of an
+  AI-powered hiring platform built on multi-stage Anthropic Claude agents, semantic search and event-driven workflows.
+  Committed to clean, efficient code, reliable delivery and measurable system performance.
+</p>
+
+<h2>Work Experience</h2>
+
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">Technical Lead</span><br /><span class="entry-sub">Palm Outsourcing</span></div>
+    <div class="meta">06/2026 – Present<br />London, UK</div>
+  </div>
+  <ul>
+    <li>Designed and built an AI-powered hiring platform (Node.js, TypeScript, Express), orchestrating multi-stage Anthropic Claude agents for candidate intake, CV parsing, screening and matching at scale.</li>
+    <li>Developed recruiter and candidate web apps with Next.js, React and TypeScript, deployed on Google Cloud Run through automated CI/CD pipelines with Cloud Build.</li>
+    <li>Architected a semantic candidate–job matching engine using vector embeddings, vector search and cross-encoder reranking, significantly reducing LLM costs through a retrieval cascade.</li>
+    <li>Optimized AI inference costs at scale with prompt caching and batch-processing APIs for efficient bulk candidate evaluation.</li>
+    <li>Built an intelligent CV processing pipeline combining text extraction, vision-model fallback for image-based PDFs and validation heuristics.</li>
+    <li>Built automated email and WhatsApp candidate communication workflows with cron jobs, event-driven webhooks and idempotent scheduling.</li>
+    <li>Implemented resilient Notion API integrations with centralized rate limiting, retries and exponential backoff for large-scale data synchronization.</li>
+    <li>Designed authentication and role-based access control (RBAC) with magic-link sign-in for Candidate, Employer and Admin user groups.</li>
+    <li>Developed real-time employer–candidate messaging with unread indicators, presence tracking and job-specific conversation channels.</li>
+    <li>Refactored a monolith into isolated services, removing bottlenecks between long-running AI workflows and user-facing operations; modeled scalable MongoDB schemas for scoring, chat history and skill taxonomies.</li>
+    <li>Led end-to-end architecture, deployment, production operations, incident response and platform reliability as the sole technical lead.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">Software Engineer</span><br /><a class="entry-sub" href="https://www.vodafone.com/careers/professional-career-areas/shared-services">VOIS</a></div>
+    <div class="meta">05/2025 – 06/2026<br />Cairo, Egypt</div>
+  </div>
+  <ul>
+    <li>Developed and maintained enterprise-grade web platforms using React and Node.js in a cloud-native environment.</li>
+    <li>Designed reusable UI components following Atomic Design and modern frontend best practices.</li>
+    <li>Built and maintained CI/CD pipelines with Azure DevOps and GitHub Actions; owned pipeline debugging and workflow optimization, reducing build failures and deployment friction.</li>
+    <li>Integrated Datadog and DevLake to deliver accurate end-to-end DORA metrics and engineering insights.</li>
+    <li>Worked extensively with AWS services and Kubernetes, managing deployments and operations with kubectl; optimized DynamoDB queries for performance and cost.</li>
+    <li>Extended Backstage with custom plugins and components to improve developer experience.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">Full Stack Engineer</span><br /><a class="entry-sub" href="https://www.herrontech.com/">HerronTech</a></div>
+    <div class="meta">06/2024 – 05/2025<br />Boston, USA (Remote)</div>
+  </div>
+  <ul>
+    <li>Delivered responsive, production web applications end to end with React, Node.js and MongoDB on Google Cloud and AWS.</li>
+    <li>Built dynamic, user-friendly interfaces following Atomic Design principles, in JavaScript and TypeScript.</li>
+    <li>Shipped well-documented code with comprehensive unit tests, collaborating within Agile teams to deliver on schedule.</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">9-Month Diploma, Open Source Application Development</span><br /><a class="entry-sub" href="https://iti.gov.eg/home">Information Technology Institute (ITI)</a></div>
+    <div class="meta">2023 – 2024<br />Cairo, Egypt</div>
+  </div>
+</div>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">Complete Web Development Program</span><br /><span class="entry-sub">The App Brewery</span></div>
+    <div class="meta">2022 – 2023<br />Online</div>
+  </div>
+</div>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">Bachelor of Engineering</span><br /><a class="entry-sub" href="https://eng.asu.edu.eg/">Ain Shams University</a></div>
+    <div class="meta">2017 – 2022<br />Cairo, Egypt</div>
+  </div>
+</div>
+
+<h2>Skills</h2>
+<div class="skills">
+  <p><b>Languages:</b> JavaScript, TypeScript, Python, Java, C, C++, PHP, Ruby, Bash</p>
+  <p><b>AI &amp; LLM:</b> Claude Agent SDK, Anthropic API, multi-agent orchestration, embeddings &amp; vector search, reranking, prompt caching, batch APIs</p>
+  <p><b>Backend:</b> Node.js, Express, NestJS, Next.js, Django, Ruby on Rails, Laravel, REST APIs, webhooks, RBAC</p>
+  <p><b>Frontend:</b> React, Next.js, Angular, Vue, Tailwind CSS, Material UI, shadcn/ui, Bootstrap</p>
+  <p><b>Databases:</b> MongoDB, PostgreSQL, MySQL, DynamoDB, Firebase</p>
+  <p><b>Cloud &amp; DevOps:</b> Google Cloud Run, Cloud Build, AWS, Kubernetes, Docker, GitHub Actions, Azure DevOps, Datadog, Backstage, Linux</p>
+  <p><b>Practices:</b> System design, unit testing, OOP, data structures &amp; algorithms, design patterns, SOLID, Agile</p>
+</div>
+
+<h2>Projects</h2>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">Bazaar</span> — <span class="entry-sub">E-commerce</span></div>
+    <div class="meta links"><a href="https://bazaar-ydo9.onrender.com/">Live</a> · <a href="https://github.com/IbrahimGaber322/ecommerce-client">Frontend</a> · <a href="https://github.com/IbrahimGaber322/ecommerce-server">Backend</a></div>
+  </div>
+  <ul><li>Django + MySQL backend and React/TypeScript frontend with Stripe payments and access/refresh-token authentication.</li></ul>
+</div>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">WebWeave</span> — <span class="entry-sub">Social media platform</span></div>
+    <div class="meta links"><a href="https://webweave.onrender.com/">Live</a> · <a href="https://github.com/IbrahimGaber322/WebWeave">Code</a></div>
+  </div>
+  <ul><li>MERN social network with real-time notifications and secure JWT sessions, styled with Material UI.</li></ul>
+</div>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">Threads</span> — <span class="entry-sub">Twitter clone</span></div>
+    <div class="meta links"><a href="https://threads-eight-ivory.vercel.app/">Live</a> · <a href="https://github.com/IbrahimGaber322/threads">Code</a></div>
+  </div>
+  <ul><li>Next.js, TypeScript, shadcn/ui and Tailwind CSS with Clerk authentication, webhooks and UploadThing image uploads; deployed on Vercel.</li></ul>
+</div>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">Good Reads</span> — <span class="entry-sub">Bookstore</span></div>
+    <div class="meta links"><a href="https://good-reads-client-one.vercel.app/">Live</a> · <a href="https://github.com/IbrahimGaber322/good_reads_client">Frontend</a> · <a href="https://github.com/IbrahimGaber322/my_good_reads_server">Backend</a></div>
+  </div>
+  <ul><li>Angular 17 + Node/Express/MongoDB bookstore with an admin panel, Cloudinary media hosting and JWT auth.</li></ul>
+</div>
+</body>
+</html>

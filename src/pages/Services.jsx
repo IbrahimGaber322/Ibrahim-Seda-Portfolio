@@ -1,43 +1,63 @@
 import React from "react";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col'
-import StorageIcon from '@mui/icons-material/Storage';
-import LaptopIcon from '@mui/icons-material/Laptop';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
-import HandymanIcon from '@mui/icons-material/Handyman';
+import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
+import LayersOutlinedIcon from "@mui/icons-material/LayersOutlined";
+import CloudQueueOutlinedIcon from "@mui/icons-material/CloudQueueOutlined";
+import HubOutlinedIcon from "@mui/icons-material/HubOutlined";
+import SectionHeading from "../components/SectionHeading";
 
+const services = [
+  {
+    icon: AutoAwesomeOutlinedIcon,
+    title: "AI agents & LLM systems",
+    text: "Multi-stage Claude agents, semantic search and reranking pipelines, designed to be accurate and to stay affordable at scale.",
+    points: ["Agent orchestration", "Embeddings & vector search", "Prompt caching & batch APIs"],
+  },
+  {
+    icon: LayersOutlinedIcon,
+    title: "Full-stack product engineering",
+    text: "From data model to polished UI: typed APIs, clean component systems and real-time features users actually enjoy.",
+    points: ["Next.js & React", "Node.js & TypeScript APIs", "Auth, RBAC & real-time chat"],
+  },
+  {
+    icon: CloudQueueOutlinedIcon,
+    title: "Cloud, DevOps & reliability",
+    text: "Shipping continuously and keeping production healthy, with pipelines, observability and sensible architecture.",
+    points: ["Cloud Run, AWS & Kubernetes", "CI/CD pipelines", "Datadog & DORA metrics"],
+  },
+  {
+    icon: HubOutlinedIcon,
+    title: "Integrations & automation",
+    text: "Robust glue between systems: webhooks, schedulers and third-party APIs that survive rate limits and retries.",
+    points: ["Email & WhatsApp workflows", "Idempotent jobs & cron", "Backoff & rate limiting"],
+  },
+];
 
-function Services(){
-    return <section className="container-fluid my-services-page section-padding" id="services">
-    <Row>
-      <Col className="title-div mb-3 pb-3">
-      <p className="title">What I Do?</p>
-      <p className="back-title">SERVICES</p>
-      </Col>
-      </Row>
-      <Row>
-      <Col className="p-4 service" md={6}>
-       <LaptopIcon className="services-icon" />
-       <p className="service-title">Web Developing</p>
-      <p className="service-desc">I can help you develope any website idea you want. Wether it's a static page or a fullstack website.</p>
-      </Col>
-      <Col className="p-4 service" md={6}>
-      <DesignServicesIcon className="services-icon" />
-      <p className="service-title">UI/UX Design</p>
-      <p className="service-desc">I can work on the UI/UX design of your page although it won't be the best I can make it as professional as I can.</p>
-      </Col>
-      <Col className="p-4 service" md={6}>
-      <StorageIcon className="services-icon" />
-      <p className="service-title">Hosting</p>
-      <p className="service-desc">I can help you with the hosting of your website and follow up on it. As well as showing you all the availabe options and picking the best price range for your website needs.</p>
-      </Col>
-      <Col className="p-4 service" md={6}>
-      <HandymanIcon className="services-icon" />
-      <p className="service-title">Fixing Problems</p>
-      <p className="service-desc">I can help you fix problems in your existing MERN stack website.</p>
-      </Col>
-    </Row>
-  </section> 
+function Services() {
+  return (
+    <section id="services" className="section">
+      <div className="container">
+        <SectionHeading index="02" eyebrow="What I do" title="How I can help your team.">
+          I'm happiest owning a product end to end, but these are the areas where I add the most.
+        </SectionHeading>
+        <div className="services-grid">
+          {services.map(({ icon: Icon, title, text, points }) => (
+            <article key={title} className="card service reveal">
+              <span className="service__icon">
+                <Icon />
+              </span>
+              <h3>{title}</h3>
+              <p>{text}</p>
+              <ul>
+                {points.map((p) => (
+                  <li key={p}>{p}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Services;
